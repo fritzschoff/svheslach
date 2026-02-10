@@ -10,7 +10,7 @@ const PlaceholderPage: React.FC<{ title: string }> = ({ title }) => (
   <div className="min-h-screen py-32 flex flex-col items-center justify-center bg-stone-50">
     <h1 className="text-4xl font-black uppercase tracking-tighter mb-4">{title}</h1>
     <p className="text-stone-500">Diese Seite ist in dieser Demoversion noch in Arbeit.</p>
-    <a href="#/" className="mt-8 text-yellow-600 font-bold uppercase tracking-widest text-xs underline">Zurück zur Startseite</a>
+    <a href="#/" className="mt-8 text-red-600 font-bold uppercase tracking-widest text-xs underline">Zurück zur Startseite</a>
   </div>
 );
 

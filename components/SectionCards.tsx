@@ -9,7 +9,7 @@ const SectionCards: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-black mb-4 uppercase tracking-tighter">Unsere Abteilungen</h2>
-          <div className="h-1.5 w-24 bg-yellow-500 mx-auto"></div>
+          <div className="h-1.5 w-24 bg-red-600 mx-auto"></div>
           <p className="mt-6 text-stone-500 max-w-2xl mx-auto">
             Vom klassischen Fußball bis hin zum gemütlichen Skat – bei uns findet jeder seinen Platz.
           </p>
@@ -41,14 +41,14 @@ const SectionCards: React.FC = () => {
                 
                 <a 
                   href={sport.link}
-                  className="inline-flex items-center gap-2 text-yellow-500 font-bold uppercase text-xs tracking-widest border-b border-transparent hover:border-yellow-500 transition-all w-max"
+                  className="inline-flex items-center gap-2 text-red-600 font-bold uppercase text-xs tracking-widest border-b border-transparent hover:border-red-600 transition-all w-max"
                 >
                   Mehr Erfahren <ChevronRight size={16} />
                 </a>
               </div>
 
               {/* Decorative accent */}
-              <div className="absolute top-0 left-0 w-12 h-1 bg-yellow-500"></div>
+              <div className="absolute top-0 left-0 w-12 h-1 bg-red-600"></div>
             </div>
           ))}
         </div>

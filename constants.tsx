@@ -4,9 +4,9 @@ import { Trophy, Dumbbell, Zap, Target, Users, BookOpen, Clock, MapPin, Phone, M
 import { SportSection, NewsItem } from './types';
 
 export const COLORS = {
-  primary: '#EAB308', // yellow-500
+  primary: '#DC2626', // red-600
   secondary: '#000000',
-  accent: '#EF4444', // red-500
+  accent: '#B91C1C', // red-700
 };
 
 export const SPORTS: SportSection[] = [
