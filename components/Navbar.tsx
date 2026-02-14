@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,15 +19,15 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-3">
+          <a href="#/" className="flex-shrink-0 flex items-center gap-3">
             <div className="w-12 h-12 bg-red-600 rounded flex items-center justify-center font-oswald text-white font-bold text-2xl border-2 border-white">
               SVH
             </div>
             <div className="flex flex-col">
               <span className="font-oswald text-xl leading-none tracking-wider">SV HESLACH</span>
-              <span className="text-[10px] text-red-600 uppercase tracking-widest font-bold">Seit 1926 • 100 Jahre</span>
+              <span className="text-[10px] text-red-600 uppercase tracking-widest font-bold">Seit 1926 &bull; 100 Jahre</span>
             </div>
-          </div>
+          </a>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
               href="#/mitgliedschaft"
               className="bg-red-600 text-white px-6 py-2 rounded-sm font-bold uppercase text-sm hover:bg-red-500 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
-              Beitreten
+              Mitglied werden
             </a>
           </div>
 

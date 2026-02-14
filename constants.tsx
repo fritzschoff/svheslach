@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Trophy, Dumbbell, Zap, Target, Users, BookOpen, Clock, MapPin, Phone, Mail } from 'lucide-react';
 import { SportSection, NewsItem } from './types';
 
 export const COLORS = {
@@ -15,48 +14,64 @@ export const SPORTS: SportSection[] = [
     title: 'Fußball',
     description: 'Tradition pur im Heslacher Wald. Von der Jugend bis zu den Aktiven.',
     icon: 'fussball',
-    image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1200',
+    image: '/images/sports/fussball.png',
     link: '#/sport/fussball'
   },
   {
-    id: 'tennis',
-    title: 'Tennis',
-    description: 'Wunderschön gelegene Tennisplätze für alle Altersgruppen.',
-    icon: 'tennis',
-    image: 'https://images.unsplash.com/photo-1595435063385-888bb89f7225?auto=format&fit=crop&q=80&w=1200',
-    link: '#/sport/tennis'
+    id: 'faustball',
+    title: 'Faustball',
+    description: 'Dynamischer Mannschaftssport mit Netz und Faust.',
+    icon: 'faustball',
+    image: '/images/sports/faustball.png',
+    link: '#/sport/faustball'
   },
   {
-    id: 'leichtathletik',
-    title: 'Leichtathletik',
-    description: 'Laufen, Springen, Werfen – Klassischer Sportgeist in Heslach.',
-    icon: 'athetics',
-    image: 'https://images.unsplash.com/photo-1461896756913-c3b478b75299?auto=format&fit=crop&q=80&w=1200',
-    link: '#/sport/leichtathletik'
-  },
-  {
-    id: 'gymnastik',
-    title: 'Gymnastik',
-    description: 'Fitness und Gesundheit für Körper und Geist.',
-    icon: 'gym',
-    image: 'https://images.unsplash.com/photo-1518611012118-29a8d63ee0c2?auto=format&fit=crop&q=80&w=1200',
-    link: '#/sport/gymnastik'
+    id: 'handball',
+    title: 'Handball',
+    description: 'Schnelles Teamspiel mit Kraft und Taktik.',
+    icon: 'handball',
+    image: '/images/sports/handball.png',
+    link: '#/sport/handball'
   },
   {
     id: 'tischtennis',
     title: 'Tischtennis',
     description: 'Schnelligkeit und Präzision an der Platte.',
-    icon: 'pingpong',
-    image: 'https://images.unsplash.com/photo-1534158914592-062992fbe900?auto=format&fit=crop&q=80&w=1200',
+    icon: 'tischtennis',
+    image: '/images/sports/tischtennis.png',
     link: '#/sport/tischtennis'
   },
   {
-    id: 'skat',
-    title: 'Skat',
-    description: 'Geselligkeit und Taktik in unserer Skat-Abteilung.',
-    icon: 'cards',
-    image: 'https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&fit=crop&q=80&w=1200',
-    link: '#/sport/skat'
+    id: 'kids-in-motion',
+    title: 'Kids in Motion',
+    description: 'Bewegung und Spaß für unsere Jüngsten.',
+    icon: 'kids',
+    image: '/images/sports/kids-in-motion.png',
+    link: '#/sport/kids-in-motion'
+  },
+  {
+    id: 'ballsport-kinder',
+    title: 'Ballsport für Kinder',
+    description: 'Spielerisch die Welt des Ballsports entdecken.',
+    icon: 'ballsport',
+    image: '/images/sports/ballsport-kinder.png',
+    link: '#/sport/ballsport-kinder'
+  },
+  {
+    id: 'walking',
+    title: 'Walking',
+    description: 'Gemeinsam aktiv an der frischen Luft.',
+    icon: 'walking',
+    image: '/images/sports/walking.png',
+    link: '#/sport/walking'
+  },
+  {
+    id: 'gymnastik',
+    title: 'Gymnastik',
+    description: 'Fitness und Gesundheit für Körper und Geist.',
+    icon: 'gymnastik',
+    image: '/images/sports/gymnastik.png',
+    link: '#/sport/gymnastik'
   }
 ];
 
