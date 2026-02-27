@@ -10,9 +10,7 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-red-600 rounded flex items-center justify-center font-oswald text-white font-bold text-xl">
-                SVH
-              </div>
+              <img src="/images/logo-svh.svg" alt="SVH Logo" className="w-10 h-10" />
               <span className="font-oswald text-2xl tracking-widest uppercase">SV HESLACH</span>
             </div>
             <p className="text-stone-400 text-sm leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
@@ -33,7 +31,6 @@ const Footer: React.FC = () => {
               <li><a href="#/mitgliedschaft" className="hover:text-white transition-colors">Mitglied werden</a></li>
               <li><a href="#/sportarten" className="hover:text-white transition-colors">Sportangebot</a></li>
               <li><a href="#/gaststaette" className="hover:text-white transition-colors">Vereinsgastst&auml;tte</a></li>
-              <li><a href="#/news" className="hover:text-white transition-colors">Aktuelles</a></li>
             </ul>
           </div>
 

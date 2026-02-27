@@ -20,9 +20,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <a href="#/" className="flex-shrink-0 flex items-center gap-3">
-            <div className="w-12 h-12 bg-red-600 rounded flex items-center justify-center font-oswald text-white font-bold text-2xl border-2 border-white">
-              SVH
-            </div>
+            <img src="/images/logo-svh.svg" alt="SVH Logo" className="w-12 h-12" />
             <div className="flex flex-col">
               <span className="font-oswald text-xl leading-none tracking-wider">SV HESLACH</span>
               <span className="text-[10px] text-red-600 uppercase tracking-widest font-bold">Seit 1926 &bull; 100 Jahre</span>

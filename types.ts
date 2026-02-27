@@ -3,15 +3,11 @@ export interface SportSection {
   id: string;
   title: string;
   description: string;
+  longDescription: string;
   icon: string;
   image: string;
+  piktogramm: string;
   link: string;
-}
-
-export interface NewsItem {
-  id: number;
-  date: string;
-  title: string;
-  excerpt: string;
-  category: string;
+  trainingTimes: string;
+  contact: string;
 }
