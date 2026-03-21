@@ -11,32 +11,32 @@ export const SPORTS: SportSection[] = [
   {
     id: 'fussball',
     title: 'Fußball',
-    description: 'Tradition pur im Heslacher Wald. Von der Jugend bis zu den Aktiven.',
-    longDescription: 'Unsere Fußballabteilung ist das Herzstück des SV Heslach. Von den Bambini bis zur ersten Mannschaft bieten wir für jede Altersklasse das passende Team. Trainiert wird auf unserem Vereinsgelände im Heslacher Wald – Tradition seit 1926. Komm vorbei und werde Teil unserer Fußballfamilie!',
+    description: 'Die größte Abteilung des Vereins – gemeinsam mit dem VfL Kaltental in der Kreisliga B.',
+    longDescription: 'Die größte Abteilung des Vereins stellt gemeinsam mit dem Stadtteil-Nachbarn VfL Kaltental zwei Mannschaften im aktiven Bereich in der Kreisliga B. Darüber hinaus gibt es gemeinsame Mannschaften im Kinder- & Jugendbereich mit der SG West. Melde dich gerne und komm dann im Training vorbei!',
     icon: 'fussball',
     image: '/images/piktogramme/Piktogramme_Fussball/Piktogramme_weiss_auf_schwarz/icon_fussball_weiss_auf_schwarz_500px.png',
     piktogramm: '/images/piktogramme/Piktogramme_Fussball/Piktogramme_rot_auf_weiss/icon_fussball_rot_auf_weiss_500px.png',
     link: '#/sport/fussball',
-    trainingTimes: 'Di & Do 18:30–20:00 Uhr, Sa 10:00–12:00 Uhr',
-    contact: 'Abteilungsleiter Fußball'
+    trainingTimes: 'Di 20:00–21:30 (beim VfL Kaltental), Do 19:30–21:00 (in Heslach)',
+    contact: 'Nicolas Rühle & Thomas Hildebrand (fussball@svheslach.de)'
   },
   {
     id: 'faustball',
     title: 'Faustball',
-    description: 'Dynamischer Mannschaftssport mit Netz und Faust.',
-    longDescription: 'Faustball verbindet Athletik, Technik und Teamgeist wie kaum eine andere Sportart. Unsere Faustballabteilung ist in der Region bekannt und bietet sowohl Trainingsmöglichkeiten für Einsteiger als auch Wettkampfmannschaften. Probier es aus – du wirst überrascht sein, wie viel Spaß dieser Sport macht!',
+    description: 'Athletik, Technik und Teamgeist – für Männer Ü40.',
+    longDescription: 'Faustball verbindet Athletik, Technik und Teamgeist wie kaum eine andere Sportart. Unsere Abteilung richtet sich an Männer Ü40, die unter besten Trainingsvoraussetzungen aktiv sein wollen.',
     icon: 'faustball',
     image: '/images/piktogramme/Piktogramme_Faustball/Piktogramme_weiss_auf_schwarz/icon_faustball_weiss_auf_schwarz_500px.png',
     piktogramm: '/images/piktogramme/Piktogramme_Faustball/Piktogramme_rot_auf_weiss/icon_faustball_rot_auf_weiss_500px.png',
     link: '#/sport/faustball',
-    trainingTimes: 'Mo & Mi 19:00–21:00 Uhr',
-    contact: 'Abteilungsleiter Faustball'
+    trainingTimes: 'Trainingszeiten auf Anfrage',
+    contact: 'Felix Auracher (info@svheslach.de)'
   },
   {
     id: 'handball',
     title: 'Handball',
-    description: 'Schnelles Teamspiel mit Kraft und Taktik.',
-    longDescription: 'Handball beim SV Heslach – das bedeutet schnelle Spielzüge, starker Zusammenhalt und jede Menge Action. Unsere Handballabteilung bietet Training für verschiedene Altersgruppen. Egal ob Anfänger oder erfahrener Spieler, bei uns findest du dein Team.',
+    description: 'Spielgemeinschaft mit EK Stuttgart e.V. – schnelles Teamspiel mit Kraft und Taktik.',
+    longDescription: 'Unsere Handballabteilung bildet eine Spielgemeinschaft mit dem EK Stuttgart e.V. (Evangelische Kirche Stuttgart, ehemals Eichenkreuz). Gemeinsam stehen wir für schnelle Spielzüge, starken Zusammenhalt und jede Menge Action auf dem Spielfeld.',
     icon: 'handball',
     image: '/images/piktogramme/Piktogramme_Handball/Piktogramme_weiss_auf_schwarz/icon_handball_weiss_auf_schwarz_500px.png',
     piktogramm: '/images/piktogramme/Piktogramme_Handball/Piktogramme_rot_auf_weiss/icon_handball_rot_auf_weiss_500px.png',
@@ -58,15 +58,15 @@ export const SPORTS: SportSection[] = [
   },
   {
     id: 'kids-in-motion',
-    title: 'Kids in Motion',
+    title: 'Kinderturnen',
     description: 'Bewegung und Spaß für unsere Jüngsten.',
-    longDescription: 'Kids in Motion (K.I.M.) ist unser Bewegungsprogramm für die Kleinsten. Hier lernen Kinder spielerisch ihre motorischen Fähigkeiten kennen und entwickeln Freude an der Bewegung. Mit altersgerechten Übungen und viel Spaß werden Koordination, Gleichgewicht und soziale Kompetenz gefördert.',
+    longDescription: 'Unser Kinderturnen ist ein Bewegungsprogramm für die Kleinsten. Hier lernen Kinder spielerisch ihre motorischen Fähigkeiten kennen und entwickeln Freude an der Bewegung. Mit altersgerechten Übungen und viel Spaß werden Koordination, Gleichgewicht und soziale Kompetenz gefördert.',
     icon: 'kids',
     image: '/images/sports/kids-in-motion.png',
     piktogramm: '/images/piktogramme/Piktogramme_oeffentlSportuBewegungsRaum/Piktogramme_rot_auf_weiss/icon_oeffentlSportuBewegungsRaum_rot_auf_weiss_500px.png',
     link: '#/sport/kids-in-motion',
-    trainingTimes: 'Di 16:00–17:00 Uhr',
-    contact: 'Übungsleiter K.I.M.'
+    trainingTimes: 'Ab 16:30 Uhr',
+    contact: 'Cora Auracher'
   },
   {
     id: 'ballsport-kinder',
@@ -77,8 +77,8 @@ export const SPORTS: SportSection[] = [
     image: '/images/sports/ballsport-kinder.png',
     piktogramm: '/images/piktogramme/Piktogramme_Fitness/Piktogramme_rot_auf_weiss/icon_fitness_rot_auf_weiss_500px.png',
     link: '#/sport/ballsport-kinder',
-    trainingTimes: 'Do 16:00–17:00 Uhr',
-    contact: 'Übungsleiter Ballschule'
+    trainingTimes: 'Fr (Zeiten auf Anfrage)',
+    contact: 'Cosima'
   },
   {
     id: 'walking',

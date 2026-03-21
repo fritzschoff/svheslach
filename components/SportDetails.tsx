@@ -11,8 +11,8 @@ const SportDetails: React.FC = () => {
           <h2 className="text-4xl font-black mb-4 uppercase tracking-tighter">Unsere Sportarten</h2>
           <div className="h-1.5 w-24 bg-red-600 mx-auto"></div>
           <p className="mt-6 text-stone-500 max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Vom klassischen Fu&szlig;ball bis hin zur Gymnastik &ndash; bei uns findet jeder seinen Platz.
-            Hier erf&auml;hrst du mehr &uuml;ber unsere acht Abteilungen.
+            &Uuml;ber Breitensport wie Fu&szlig;ball bis hin zur Gymnastik: bei uns findet jeder seinen Platz.
+            Hier erf&auml;hrst du mehr &uuml;ber unsere Abteilungen.
           </p>
         </div>
 
