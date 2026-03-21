@@ -16,17 +16,47 @@ const Home: React.FC = () => {
              <div className="md:w-1/2">
                 <h2 className="text-4xl font-black text-white uppercase mb-4 tracking-tighter">Ein Jahrhundert Heslach</h2>
                 <p className="text-white font-medium text-lg leading-relaxed opacity-90" style={{ fontFamily: 'Inter, sans-serif' }}>
-                  Gegr&uuml;ndet 1926 blicken wir auf eine bewegte Geschichte zur&uuml;ck. Im Jahr 2026 feiern wir unser 100-j&auml;hriges Bestehen mit einer Serie von Sonderevents.
+                  Gegr&uuml;ndet 1926 blicken wir auf eine bewegte Geschichte zur&uuml;ck. Im Jahr 2026 feiern wir unser 100-j&auml;hriges Bestehen am 20.06.2026 auf unserem Vereinsgel&auml;nde in der Rotenwaldstr. 373 in 70197 Stuttgart.
                 </p>
              </div>
              <div className="flex gap-4">
                 <button className="bg-black text-white px-8 py-3 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">
-                  Festschrift lesen
+                  Info-Plakat
                 </button>
                 <button className="bg-white text-black border-2 border-black px-8 py-3 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">
-                  Termine 2024&ndash;2026
+                  Termine 2026
                 </button>
              </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Termine */}
+      <section className="py-16 bg-stone-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-4xl font-black text-white uppercase tracking-tighter mb-4">Termine</h2>
+            <div className="h-1.5 w-24 bg-red-600 mx-auto"></div>
+          </div>
+          <div className="max-w-2xl mx-auto space-y-6">
+            <div className="flex items-center gap-6 bg-stone-800 p-6 border-l-4 border-red-600">
+              <div className="text-center shrink-0">
+                <div className="text-red-600 font-black text-2xl">08.05.</div>
+                <div className="text-stone-400 text-sm font-bold">2026</div>
+              </div>
+              <div>
+                <h3 className="text-white font-bold text-lg">Mitgliederversammlung</h3>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 bg-stone-800 p-6 border-l-4 border-red-600">
+              <div className="text-center shrink-0">
+                <div className="text-red-600 font-black text-2xl">20.06.</div>
+                <div className="text-stone-400 text-sm font-bold">2026</div>
+              </div>
+              <div>
+                <h3 className="text-white font-bold text-lg">Fest zum 100-j&auml;hrigen Bestehen</h3>
+              </div>
+            </div>
           </div>
         </div>
       </section>
