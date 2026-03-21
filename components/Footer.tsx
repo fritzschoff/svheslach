@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-red-600 shrink-0" size={18} />
-                <span>0711 / 690714</span>
+                <span>Fax: 0711 / 690714</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-red-600 shrink-0" size={18} />
@@ -53,20 +53,15 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Newsletter / CTA */}
+          {/* CTA */}
           <div>
-            <h4 className="text-lg font-bold uppercase mb-6 text-red-600">Bleib am Ball</h4>
+            <h4 className="text-lg font-bold uppercase mb-6 text-red-600">Mitmachen</h4>
             <p className="text-sm text-stone-400 mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Melden Sie sich bei unserem E-Mail-Verteiler an und verpassen Sie keine Neuigkeiten.
+              Von Jung bis Alt &ndash; bei uns bleibt jeder fit und in Bewegung! &Uuml;ber die einzelnen Kacheln findest du deinen Ansprechpartner.
             </p>
-            <form className="flex" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="E-Mail Adresse"
-                className="bg-stone-800 border-none px-4 py-2 w-full text-sm focus:ring-1 focus:ring-red-600"
-              />
-              <button className="bg-red-600 text-white px-4 py-2 font-bold uppercase text-xs">OK</button>
-            </form>
+            <a href="#/mitgliedschaft" className="inline-block bg-red-600 text-white px-6 py-3 font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-colors">
+              Mitglied werden
+            </a>
           </div>
         </div>
 

@@ -69,7 +69,7 @@ const Home: React.FC = () => {
       <section className="py-0 bg-black">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
           <div className="aspect-square overflow-hidden">
-            <img src="/images/gaststaette/innen-festlich.jpg" alt="Festlich gedeckter Saal" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+            <img src="/images/sports/fussball-spielszene.jpg" alt="Fußball Spielszene" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
           </div>
           <div className="aspect-square overflow-hidden">
             <img src="/images/events/public-viewing-tag.jpg" alt="Public Viewing" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
@@ -78,16 +78,16 @@ const Home: React.FC = () => {
             <img src="/images/gaststaette/biergarten-panorama.jpg" alt="Biergarten Panorama" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src="/images/events/spanferkel.jpg" alt="Spanferkel" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+            <img src="/images/sports/fussball-mannschaft.jpg" alt="Mannschaftsfoto" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
           </div>
           <div className="aspect-square overflow-hidden">
             <img src="/images/gaststaette/biergarten-feier.jpg" alt="Biergarten Feier" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src="/images/gaststaette/biergarten-tisch.jpg" alt="Biergarten Tisch" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+            <img src="/images/sports/fussball-kaltental.jpg" alt="VfL Kaltental Spielszene" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src="/images/gaststaette/innen-ballons.jpg" alt="Festliche Dekoration" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+            <img src="/images/gaststaette/innen-festlich.jpg" alt="Festlich gedeckter Saal" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
           </div>
           <div className="aspect-square overflow-hidden">
             <img src="/images/events/public-viewing-nacht.jpg" alt="Public Viewing Nacht" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
@@ -107,7 +107,7 @@ const Home: React.FC = () => {
           <h2 className="text-red-600 font-oswald text-2xl uppercase tracking-[0.3em] mb-4">Vereinsgastst&auml;tte</h2>
           <h3 className="text-5xl md:text-6xl font-black text-white uppercase mb-8 leading-tight">WEITMANNS <br /> WALDHAUS.</h3>
           <p className="text-stone-300 max-w-xl mx-auto mb-10 text-lg" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Ob nach dem Training oder f&uuml;r private Feiern &ndash; das Weitmanns Waldhaus ist f&uuml;r Sie da.
+            Das Weitmanns Waldhaus ist f&uuml;r Sie da.
             Unsere gem&uuml;tliche Vereinsgastst&auml;tte befindet sich direkt auf dem Vereinsgel&auml;nde im Heslacher Wald.
           </p>
           <a
