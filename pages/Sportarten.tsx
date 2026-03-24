@@ -30,9 +30,9 @@ const Sportarten: React.FC = () => {
               <a
                 key={sport.id}
                 href={sport.link}
-                className="group flex overflow-hidden bg-stone-50 hover:bg-stone-100 transition-colors shadow-sm hover:shadow-md"
+                className="group flex flex-col sm:flex-row overflow-hidden bg-stone-50 hover:bg-stone-100 transition-colors shadow-sm hover:shadow-md"
               >
-                <div className="w-48 h-48 shrink-0 bg-black flex items-center justify-center p-6">
+                <div className="w-full sm:w-48 h-48 shrink-0 bg-black flex items-center justify-center p-6">
                   <img
                     src={sport.image}
                     alt={sport.title}

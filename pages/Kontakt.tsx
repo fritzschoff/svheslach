@@ -74,11 +74,11 @@ const Kontakt: React.FC = () => {
               </p>
               <div className="space-y-3">
                 {SPORTS.map((sport) => (
-                  <div key={sport.id} className="flex items-center justify-between py-3 border-b border-stone-100">
+                  <div key={sport.id} className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-3 border-b border-stone-100 gap-1">
                     <a href={sport.link} className="font-bold hover:text-red-600 transition-colors">{sport.title}</a>
                     <a href={`mailto:${sport.email}?subject=Anfrage%20${encodeURIComponent(sport.title)}&body=Hallo%20liebes%20${encodeURIComponent(sport.title)}-Team%2C%0A%0A%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen`} className="text-sm text-stone-500 hover:text-red-600 transition-colors flex items-center gap-2" style={{ fontFamily: 'Inter, sans-serif' }}>
-                      <Mail size={14} className="text-red-600" />
-                      {sport.email}
+                      <Mail size={14} className="text-red-600 shrink-0" />
+                      <span className="break-all">{sport.email}</span>
                     </a>
                   </div>
                 ))}
