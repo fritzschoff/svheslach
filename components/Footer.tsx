@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { MapPin, Phone, Mail, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-stone-900 text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
@@ -16,11 +16,6 @@ const Footer: React.FC = () => {
             <p className="text-stone-400 text-sm leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
               Ihr Verein im Süden von Stuttgart. Sport, Gemeinschaft und Tradition seit 1926. Wir freuen uns auf Sie!
             </p>
-            <div className="flex gap-4">
-              <a href="https://www.instagram.com/sv_heslach_fussball" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors">
-                <Instagram size={18} />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -54,21 +49,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Newsletter / CTA */}
-          <div>
-            <h4 className="text-lg font-bold uppercase mb-6 text-red-600">Bleib am Ball</h4>
-            <p className="text-sm text-stone-400 mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Melden Sie sich bei unserem E-Mail-Verteiler an und verpassen Sie keine Neuigkeiten.
-            </p>
-            <form className="flex" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="E-Mail Adresse"
-                className="bg-stone-800 border-none px-4 py-2 w-full text-sm focus:ring-1 focus:ring-red-600"
-              />
-              <button className="bg-red-600 text-white px-4 py-2 font-bold uppercase text-xs">OK</button>
-            </form>
-          </div>
         </div>
 
         {/* OpenStreetMap Embed */}
