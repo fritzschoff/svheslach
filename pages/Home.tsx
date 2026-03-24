@@ -16,7 +16,7 @@ const Home: React.FC = () => {
              <div className="md:w-1/2">
                 <h2 className="text-4xl font-black text-white uppercase mb-4 tracking-tighter">Ein Jahrhundert Heslach</h2>
                 <p className="text-white font-medium text-lg leading-relaxed opacity-90" style={{ fontFamily: 'Inter, sans-serif' }}>
-                  Gegr&uuml;ndet 1926 blicken wir auf eine bewegte Geschichte zur&uuml;ck. Im Jahr 2026 feiern wir unser 100-j&auml;hriges Bestehen am 20.06.2026 auf unserem Vereinsgel&auml;nde in der Rotenwaldstr. 373 in 70197 Stuttgart.
+                  Gegründet 1926 blicken wir auf eine bewegte Geschichte zurück. Im Jahr 2026 feiern wir unser 100-jähriges Bestehen am 20.06.2026 auf unserem Vereinsgelände in der Rotenwaldstr. 373 in 70197 Stuttgart.
                 </p>
              </div>
              <div className="flex gap-4">
@@ -54,7 +54,7 @@ const Home: React.FC = () => {
                 <div className="text-stone-400 text-sm font-bold">2026</div>
               </div>
               <div>
-                <h3 className="text-white font-bold text-lg">Fest zum 100-j&auml;hrigen Bestehen</h3>
+                <h3 className="text-white font-bold text-lg">Fest zum 100-jährigen Bestehen</h3>
               </div>
             </div>
           </div>
@@ -104,11 +104,11 @@ const Home: React.FC = () => {
         />
         <div className="absolute inset-0 bg-stone-900/75"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-red-600 font-oswald text-2xl uppercase tracking-[0.3em] mb-4">Vereinsgastst&auml;tte</h2>
+          <h2 className="text-red-600 font-oswald text-2xl uppercase tracking-[0.3em] mb-4">Vereinsgaststätte</h2>
           <h3 className="text-5xl md:text-6xl font-black text-white uppercase mb-8 leading-tight">WEITMANNS <br /> WALDHAUS.</h3>
           <p className="text-stone-300 max-w-xl mx-auto mb-10 text-lg" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Ob nach dem Training oder f&uuml;r private Feiern &ndash; das Weitmanns Waldhaus ist f&uuml;r Sie da.
-            Unsere gem&uuml;tliche Vereinsgastst&auml;tte befindet sich direkt auf dem Vereinsgel&auml;nde im Heslacher Wald.
+            Ob nach dem Training oder für private Feiern – das Weitmanns Waldhaus ist für Sie da.
+            Unsere gemütliche Vereinsgaststätte befindet sich direkt auf dem Vereinsgelände im Heslacher Wald.
           </p>
           <a
             href="#/gaststaette"

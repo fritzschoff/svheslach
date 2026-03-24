@@ -8,6 +8,15 @@ export interface SportSection {
   image: string;
   piktogramm: string;
   link: string;
+  email: string;
   trainingTimes: string;
   contact: string;
+}
+
+export interface NewsItem {
+  id: number;
+  date: string;
+  title: string;
+  excerpt: string;
+  category: string;
 }

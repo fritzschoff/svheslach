@@ -11,8 +11,8 @@ const SectionCards: React.FC = () => {
           <h2 className="text-4xl font-black mb-4 uppercase tracking-tighter">Unsere Abteilungen</h2>
           <div className="h-1.5 w-24 bg-red-600 mx-auto"></div>
           <p className="mt-6 text-stone-500 max-w-2xl mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Von Jung bis Alt &ndash; bei uns bleibt jeder fit und in Bewegung!
-            &Uuml;ber die einzelnen Kacheln findest du deinen Ansprechpartner.
+            Von Jung bis Alt – bei uns bleibt jeder fit und in Bewegung!
+            Über die einzelnen Kacheln findest du deinen Ansprechpartner.
           </p>
         </div>
 

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { SPORTS } from '../constants';
-import { Clock, User, ChevronRight } from 'lucide-react';
+import { Clock, User, Mail, ChevronRight } from 'lucide-react';
 
 const SportDetails: React.FC = () => {
   return (
@@ -46,6 +46,10 @@ const SportDetails: React.FC = () => {
                   <div className="flex items-center gap-3 text-sm text-stone-500">
                     <User size={18} className="text-red-600 shrink-0" />
                     <span style={{ fontFamily: 'Inter, sans-serif' }}>{sport.contact}</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-stone-500">
+                    <Mail size={18} className="text-red-600 shrink-0" />
+                    <a href={`mailto:${sport.email}`} className="hover:text-red-600 transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>{sport.email}</a>
                   </div>
                 </div>
                 <a

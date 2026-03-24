@@ -1,11 +1,14 @@
 
-import { SportSection } from './types';
+import { SportSection, NewsItem } from './types';
 
 export const COLORS = {
   primary: '#DC2626', // red-600
   secondary: '#000000',
   accent: '#B91C1C', // red-700
 };
+
+export const GENERAL_EMAIL = 'info@svheslach.de';
+export const VERWALTUNG_EMAIL = 'verwaltung@svheslach.de';
 
 export const SPORTS: SportSection[] = [
   {
@@ -17,20 +20,9 @@ export const SPORTS: SportSection[] = [
     image: '/images/piktogramme/Piktogramme_Fussball/Piktogramme_weiss_auf_schwarz/icon_fussball_weiss_auf_schwarz_500px.png',
     piktogramm: '/images/piktogramme/Piktogramme_Fussball/Piktogramme_rot_auf_weiss/icon_fussball_rot_auf_weiss_500px.png',
     link: '#/sport/fussball',
-    trainingTimes: 'Di 20:00–21:30 (beim VfL Kaltental), Do 19:30–21:00 (in Heslach)',
-    contact: 'Nicolas Rühle & Thomas Hildebrand (fussball@svheslach.de)'
-  },
-  {
-    id: 'faustball',
-    title: 'Faustball',
-    description: 'Athletik, Technik und Teamgeist – für Männer Ü40.',
-    longDescription: 'Faustball verbindet Athletik, Technik und Teamgeist wie kaum eine andere Sportart. Unsere Abteilung richtet sich an Männer Ü40, die unter besten Trainingsvoraussetzungen aktiv sein wollen.',
-    icon: 'faustball',
-    image: '/images/piktogramme/Piktogramme_Faustball/Piktogramme_weiss_auf_schwarz/icon_faustball_weiss_auf_schwarz_500px.png',
-    piktogramm: '/images/piktogramme/Piktogramme_Faustball/Piktogramme_rot_auf_weiss/icon_faustball_rot_auf_weiss_500px.png',
-    link: '#/sport/faustball',
-    trainingTimes: 'Trainingszeiten auf Anfrage',
-    contact: 'Felix Auracher (info@svheslach.de)'
+    email: 'fussball@svheslach.de',
+    trainingTimes: 'Di 20:00 Uhr VfL Kaltental, Fr 19:30 Uhr SV Heslach',
+    contact: 'Thomas Hildebrand (Abt.-Leiter), Nicolas Rühle (Spielleiter)'
   },
   {
     id: 'handball',
@@ -41,8 +33,9 @@ export const SPORTS: SportSection[] = [
     image: '/images/piktogramme/Piktogramme_Handball/Piktogramme_weiss_auf_schwarz/icon_handball_weiss_auf_schwarz_500px.png',
     piktogramm: '/images/piktogramme/Piktogramme_Handball/Piktogramme_rot_auf_weiss/icon_handball_rot_auf_weiss_500px.png',
     link: '#/sport/handball',
-    trainingTimes: 'Di & Fr 18:00–20:00 Uhr',
-    contact: 'Abteilungsleiter Handball'
+    email: 'handball@svheslach.de',
+    trainingTimes: 'Di & Mi jeweils 20:15 Uhr, Schickhardt-Sporthalle, Mörikestraße',
+    contact: 'Matthias Schaal (Abt.-Leiter)'
   },
   {
     id: 'tischtennis',
@@ -53,8 +46,9 @@ export const SPORTS: SportSection[] = [
     image: '/images/piktogramme/Piktogramme_Tischtennis/Piktogramme_weiss_auf_schwarz/icon_tischtennis_weiss_auf_schwarz_500px.png',
     piktogramm: '/images/piktogramme/Piktogramme_Tischtennis/Piktogramme_rot_auf_weiss/icon_tischtennis_rot_auf_weiss_500px.png',
     link: '#/sport/tischtennis',
-    trainingTimes: 'Mi 19:00–21:30 Uhr, Fr 18:00–20:00 Uhr',
-    contact: 'Abteilungsleiter Tischtennis'
+    email: 'tischtennis@svheslach.de',
+    trainingTimes: 'Di 19:00 Uhr, Turnhalle der Wilhelm-Hauff-Schule',
+    contact: 'Dr. Wolfgang Mutscheller (Abt.-Leiter)'
   },
   {
     id: 'kids-in-motion',
@@ -65,8 +59,9 @@ export const SPORTS: SportSection[] = [
     image: '/images/sports/kids-in-motion.png',
     piktogramm: '/images/piktogramme/Piktogramme_oeffentlSportuBewegungsRaum/Piktogramme_rot_auf_weiss/icon_oeffentlSportuBewegungsRaum_rot_auf_weiss_500px.png',
     link: '#/sport/kids-in-motion',
-    trainingTimes: 'Ab 16:30 Uhr',
-    contact: 'Cora Auracher'
+    email: 'kidsinmotion@svheslach.de',
+    trainingTimes: 'Fr 15:45 Uhr, Turnhalle der Torwiesenschule',
+    contact: 'Sabine Jelica'
   },
   {
     id: 'ballsport-kinder',
@@ -77,8 +72,22 @@ export const SPORTS: SportSection[] = [
     image: '/images/sports/ballsport-kinder.png',
     piktogramm: '/images/piktogramme/Piktogramme_Fitness/Piktogramme_rot_auf_weiss/icon_fitness_rot_auf_weiss_500px.png',
     link: '#/sport/ballsport-kinder',
-    trainingTimes: 'Fr (Zeiten auf Anfrage)',
-    contact: 'Cosima'
+    email: 'ballsportfuerkinder@svheslach.de',
+    trainingTimes: 'Mi & Fr jeweils 17:30 Uhr, Turnhalle der Kaufmännischen Schule Aussenstelle Süd, Zellerstraße 37',
+    contact: 'Cosima Schon (Anmeldung: Gabriele Schmid)'
+  },
+  {
+    id: 'gymnastik',
+    title: 'Damengymnastik',
+    description: 'Fitness und Gesundheit für Körper und Geist.',
+    longDescription: 'Unsere Gymnastikabteilung bietet ein vielfältiges Programm für alle Altersgruppen. Von klassischer Gymnastik über Rückenfit bis hin zu Entspannungsübungen – hier findet jeder den passenden Kurs. Bleib fit und gesund mit uns!',
+    icon: 'gymnastik',
+    image: '/images/piktogramme/Piktogramme_Gymnastik/Piktogramme_weiss_auf_schwarz/icon_gymnastik_weiss_auf_schwarz_500px.png',
+    piktogramm: '/images/piktogramme/Piktogramme_Gymnastik/Piktogramme_rot_auf_weiss/icon_gymnastik_rot_auf_weiss_500px.png',
+    link: '#/sport/gymnastik',
+    email: 'gymnastik@svheslach.de',
+    trainingTimes: 'Di 19:00 Uhr, Turnhalle der Lerchenrainschule',
+    contact: 'Daniela Müller'
   },
   {
     id: 'walking',
@@ -89,20 +98,71 @@ export const SPORTS: SportSection[] = [
     image: '/images/piktogramme/Piktogramme_Nordic_Walking/Piktogramme_weiss_auf_schwarz/icon_nordic_walking_weiss_auf_schwarz_500px.png',
     piktogramm: '/images/piktogramme/Piktogramme_Nordic_Walking/Piktogramme_rot_auf_weiss/icon_nordic_walking_rot_auf_weiss_500px.png',
     link: '#/sport/walking',
-    trainingTimes: 'Sa 09:00–10:30 Uhr',
-    contact: 'Abteilungsleiter Walking'
+    email: 'walking@svheslach.de',
+    trainingTimes: 'Do 17:30 Uhr, Start beim Vereinsgelände',
+    contact: 'Gabriele Schmid'
   },
   {
-    id: 'gymnastik',
-    title: 'Gymnastik',
-    description: 'Fitness und Gesundheit für Körper und Geist.',
-    longDescription: 'Unsere Gymnastikabteilung bietet ein vielfältiges Programm für alle Altersgruppen. Von klassischer Gymnastik über Rückenfit bis hin zu Entspannungsübungen – hier findet jeder den passenden Kurs. Bleib fit und gesund mit uns!',
-    icon: 'gymnastik',
+    id: 'faustball',
+    title: 'Faustball',
+    description: 'Athletik, Technik und Teamgeist – für Männer Ü40.',
+    longDescription: 'Faustball verbindet Athletik, Technik und Teamgeist wie kaum eine andere Sportart. Unsere Abteilung richtet sich an Männer Ü40, die unter besten Trainingsvoraussetzungen aktiv sein wollen.',
+    icon: 'faustball',
+    image: '/images/piktogramme/Piktogramme_Faustball/Piktogramme_weiss_auf_schwarz/icon_faustball_weiss_auf_schwarz_500px.png',
+    piktogramm: '/images/piktogramme/Piktogramme_Faustball/Piktogramme_rot_auf_weiss/icon_faustball_rot_auf_weiss_500px.png',
+    link: '#/sport/faustball',
+    email: 'faustball@svheslach.de',
+    trainingTimes: 'Di 18:15 Uhr, Vereinsgelände – ab Oktober Turnhalle des Schickhardt-Gymnasiums',
+    contact: 'Otto Wiemer'
+  },
+  {
+    id: 'senioren',
+    title: 'Senioren',
+    description: 'Fit und aktiv im besten Alter.',
+    longDescription: 'Unsere Seniorenabteilung bietet ein abwechslungsreiches Programm für alle, die auch im Alter aktiv bleiben möchten. Von Gymnastik über leichte Sportspiele bis hin zu geselligen Treffen – hier bleibt niemand allein.',
+    icon: 'senioren',
     image: '/images/piktogramme/Piktogramme_Gymnastik/Piktogramme_weiss_auf_schwarz/icon_gymnastik_weiss_auf_schwarz_500px.png',
     piktogramm: '/images/piktogramme/Piktogramme_Gymnastik/Piktogramme_rot_auf_weiss/icon_gymnastik_rot_auf_weiss_500px.png',
-    link: '#/sport/gymnastik',
-    trainingTimes: 'Mo & Do 18:00–19:30 Uhr',
-    contact: 'Abteilungsleiterin Gymnastik'
+    link: '#/sport/senioren',
+    email: 'senioren@svheslach.de',
+    trainingTimes: 'Auf Anfrage',
+    contact: 'Kontakt über info@svheslach.de'
+  },
+  {
+    id: 'jungsenior',
+    title: 'Jungsenioren',
+    description: 'Sport und Geselligkeit für die Generation ab 35.',
+    longDescription: 'Die Jungsenioren sind die Brücke zwischen den Aktiven und den Senioren. Hier treffen sich sportbegeisterte Mitglieder ab 35 Jahren für regelmäßiges Training, Turniere und gesellige Abende.',
+    icon: 'jungsenior',
+    image: '/images/piktogramme/Piktogramme_Fitness/Piktogramme_weiss_auf_schwarz/icon_fitness_weiss_auf_schwarz_500px.png',
+    piktogramm: '/images/piktogramme/Piktogramme_Fitness/Piktogramme_rot_auf_weiss/icon_fitness_rot_auf_weiss_500px.png',
+    link: '#/sport/jungsenior',
+    email: 'jungsenior@svheslach.de',
+    trainingTimes: 'Mi 19:00 Uhr, Vereinsgelände',
+    contact: 'Kontakt über info@svheslach.de'
   }
 ];
 
+export const NEWS: NewsItem[] = [
+  {
+    id: 1,
+    date: '15.05.2026',
+    title: '100 Jahre Jubiläumsfeier',
+    excerpt: 'Wir feiern unser großes Jubiläum am 20.06.2026 auf dem Vereinsgelände. Alle Mitglieder sind herzlich eingeladen.',
+    category: 'Verein'
+  },
+  {
+    id: 2,
+    date: '10.05.2026',
+    title: 'Sieg im Lokalderby',
+    excerpt: 'Unsere 1. Mannschaft gewinnt mit 3:1 gegen den Nachbarn.',
+    category: 'Fußball'
+  },
+  {
+    id: 3,
+    date: '02.05.2026',
+    title: 'Neue Walking-Saison eröffnet',
+    excerpt: 'Die Walking-Gruppe startet mit neuen Routen in den Frühling.',
+    category: 'Walking'
+  }
+];

@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 mb-6 bg-red-600 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
-            <span className="animate-pulse">&bull;</span> 100 Jahre Tradition (1926&ndash;2026)
+            <span className="animate-pulse">●</span> 100 Jahre Tradition (1926–2026)
           </div>
           <h1 className="text-6xl md:text-8xl font-black text-white leading-none mb-6">
             HEIMSPIEL IN <br />
@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
                 <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0 " fill="transparent" />
                 <text className="text-[9px] uppercase font-bold tracking-[0.2em] fill-red-600">
                     <textPath xlinkHref="#circlePath">
-                        &bull; 100 JAHRE SV HESLACH &bull; TRADITION SEIT 1926 &bull;
+                        • 100 JAHRE SV HESLACH • TRADITION SEIT 1926 •
                     </textPath>
                 </text>
             </svg>

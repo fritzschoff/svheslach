@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { SPORTS } from '../constants';
-import { Clock, User, MapPin, ArrowLeft, ChevronRight } from 'lucide-react';
+import { Clock, User, Mail, MapPin, ArrowLeft, ChevronRight } from 'lucide-react';
 
 interface SportPageProps {
   sportId: string;
@@ -127,6 +127,13 @@ const SportPage: React.FC<SportPageProps> = ({ sportId }) => {
                   <div>
                     <p className="font-bold text-sm mb-1">Ansprechpartner</p>
                     <p className="text-stone-400 text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>{sport.contact}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 mt-6">
+                  <Mail size={20} className="text-red-600 mt-1 shrink-0" />
+                  <div>
+                    <p className="font-bold text-sm mb-1">E-Mail</p>
+                    <a href={`mailto:${sport.email}?subject=Anfrage%20${encodeURIComponent(sport.title)}&body=Hallo%20liebes%20${encodeURIComponent(sport.title)}-Team%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20Eure%20Abteilung%20und%20w%C3%BCrde%20gerne%20mehr%20erfahren.%0A%0AMit%20freundlichen%20Gr%C3%BC%C3%9Fen`} className="text-red-600 text-sm hover:underline" style={{ fontFamily: 'Inter, sans-serif' }}>{sport.email}</a>
                   </div>
                 </div>
               </div>

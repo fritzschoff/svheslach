@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               <span className="font-oswald text-2xl tracking-widest uppercase">SV HESLACH</span>
             </div>
             <p className="text-stone-400 text-sm leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Ihr Verein im S&uuml;den von Stuttgart. Sport, Gemeinschaft und Tradition seit 1926. Wir freuen uns auf Sie!
+              Ihr Verein im Süden von Stuttgart. Sport, Gemeinschaft und Tradition seit 1926. Wir freuen uns auf Sie!
             </p>
             <div className="flex gap-4">
               <a href="https://www.instagram.com/sv_heslach_fussball" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center hover:bg-red-600 hover:text-white transition-colors">
@@ -27,10 +27,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-bold uppercase mb-6 text-red-600">Navigation</h4>
             <ul className="space-y-4 text-sm text-stone-400" style={{ fontFamily: 'Inter, sans-serif' }}>
-              <li><a href="#/verein" className="hover:text-white transition-colors">&Uuml;ber den Verein</a></li>
+              <li><a href="#/verein" className="hover:text-white transition-colors">Über den Verein</a></li>
               <li><a href="#/mitgliedschaft" className="hover:text-white transition-colors">Mitglied werden</a></li>
               <li><a href="#/sportarten" className="hover:text-white transition-colors">Sportangebot</a></li>
-              <li><a href="#/gaststaette" className="hover:text-white transition-colors">Vereinsgastst&auml;tte</a></li>
+              <li><a href="#/gaststaette" className="hover:text-white transition-colors">Vereinsgaststätte</a></li>
+              <li><a href="#/kontakt" className="hover:text-white transition-colors">Kontakt</a></li>
             </ul>
           </div>
 
@@ -40,7 +41,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm text-stone-400" style={{ fontFamily: 'Inter, sans-serif' }}>
               <li className="flex items-start gap-3">
                 <MapPin className="text-red-600 shrink-0 mt-0.5" size={18} />
-                <span>Sportverein Heslach e.V.<br />Rotenwaldstra&szlig;e 373<br />70197 Stuttgart</span>
+                <span>Sportverein Heslach e.V.<br />Rotenwaldstraße 373<br />70197 Stuttgart</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-red-600 shrink-0" size={18} />
@@ -48,7 +49,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-red-600 shrink-0" size={18} />
-                <span>info@svheslach.de</span>
+                <a href="mailto:info@svheslach.de" className="hover:text-white transition-colors">info@svheslach.de</a>
               </li>
             </ul>
           </div>
@@ -84,7 +85,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="pt-10 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-500 uppercase tracking-widest">
-          <p>&copy; 2026 SV HESLACH E.V.</p>
+          <p>© 2026 SV HESLACH E.V.</p>
           <div className="flex gap-8">
             <a href="#/impressum" className="hover:text-red-600">Impressum</a>
             <a href="#/datenschutz" className="hover:text-red-600">Datenschutz</a>
