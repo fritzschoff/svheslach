@@ -41,7 +41,7 @@ const Impressum: React.FC = () => {
           <div>
             <h2 className="text-xl font-black uppercase tracking-tighter mb-3 text-black" style={{ fontFamily: 'Oswald, sans-serif' }}>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
             <p>
-              Sportverein Heslach 1926 e.V.<br />
+              Sportverein Heslach e.V.<br />
               Rotenwaldstraße 373<br />
               70197 Stuttgart
             </p>

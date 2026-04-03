@@ -20,9 +20,9 @@ const Home: React.FC = () => {
                 </p>
              </div>
              <div className="flex gap-4">
-                <button className="bg-black text-white px-8 py-3 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">
+                <a href="#/info-plakat" className="bg-black text-white px-8 py-3 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">
                   Info-Plakat
-                </button>
+                </a>
                 <button className="bg-white text-black border-2 border-black px-8 py-3 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">
                   Termine 2026
                 </button>

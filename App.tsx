@@ -13,6 +13,7 @@ import NewsPage from './pages/News';
 import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import SportPage from './pages/SportPage';
+import InfoPlakat from './pages/InfoPlakat';
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -39,6 +40,7 @@ const App: React.FC = () => {
             <Route path="/news" element={<NewsPage />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
+            <Route path="/info-plakat" element={<InfoPlakat />} />
             <Route path="/sport/fussball" element={<SportPage sportId="fussball" />} />
             <Route path="/sport/handball" element={<SportPage sportId="handball" />} />
             <Route path="/sport/tischtennis" element={<SportPage sportId="tischtennis" />} />

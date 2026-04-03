@@ -22,7 +22,7 @@ export const SPORTS: SportSection[] = [
     link: '#/sport/fussball',
     email: 'fussball@svheslach.de',
     trainingTimes: 'Di 20:00 Uhr VfL Kaltental, Fr 19:30 Uhr SV Heslach',
-    contact: 'Thomas Hildebrand (Abt.-Leiter), Nicolas Rühle (Spielleiter)'
+    contact: 'Thomas Hildebrand (Abt.-Leiter), Nicolas Rühle (Abt.-Leiter)'
   },
   {
     id: 'handball',
@@ -56,7 +56,7 @@ export const SPORTS: SportSection[] = [
     description: 'Bewegung und Spaß für unsere Jüngsten.',
     longDescription: 'Unser Kinderturnen ist ein Bewegungsprogramm für die Kleinsten. Hier lernen Kinder spielerisch ihre motorischen Fähigkeiten kennen und entwickeln Freude an der Bewegung. Mit altersgerechten Übungen und viel Spaß werden Koordination, Gleichgewicht und soziale Kompetenz gefördert.',
     icon: 'kids',
-    image: '/images/sports/kids-in-motion.png',
+    image: '/images/piktogramme/Piktogramme_oeffentlSportuBewegungsRaum/Piktogramme_weiss_auf_schwarz/icon_oeffentlSportuBewegungsRaum_weiss_auf_schwarz_500px.png',
     piktogramm: '/images/piktogramme/Piktogramme_oeffentlSportuBewegungsRaum/Piktogramme_rot_auf_weiss/icon_oeffentlSportuBewegungsRaum_rot_auf_weiss_500px.png',
     link: '#/sport/kids-in-motion',
     email: 'kidsinmotion@svheslach.de',
@@ -69,7 +69,7 @@ export const SPORTS: SportSection[] = [
     description: 'Spielerisch die Welt des Ballsports entdecken.',
     longDescription: 'In unserer Ballschule entdecken Kinder die faszinierende Welt des Ballsports. Ob Werfen, Fangen, Dribbeln oder Schießen – hier wird alles ausprobiert. Die Kinder lernen verschiedene Ballsportarten kennen und finden so vielleicht ihre neue Lieblingssportart.',
     icon: 'ballsport',
-    image: '/images/sports/ballsport-kinder.png',
+    image: '/images/piktogramme/Piktogramme_Fitness/Piktogramme_weiss_auf_schwarz/icon_fitness_weiss_auf_schwarz_500px.png',
     piktogramm: '/images/piktogramme/Piktogramme_Fitness/Piktogramme_rot_auf_weiss/icon_fitness_rot_auf_weiss_500px.png',
     link: '#/sport/ballsport-kinder',
     email: 'ballsportfuerkinder@svheslach.de',

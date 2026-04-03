@@ -10,11 +10,11 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <img src="/images/logo-svh.svg" alt="SVH Logo" className="w-10 h-10" />
+              <img src="/images/wappen-svh.png" alt="SVH Wappen" className="w-10 h-10" />
               <span className="font-oswald text-2xl tracking-widest uppercase">SV HESLACH</span>
             </div>
             <p className="text-stone-400 text-sm leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Ihr Verein im Süden von Stuttgart. Sport, Gemeinschaft und Tradition seit 1926. Wir freuen uns auf Sie!
+              Ihr Verein im Süden von Stuttgart. Sport, Gemeinschaft und Tradition seit 1926. Wir freuen uns auf dich!
             </p>
           </div>
 
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
             height="250"
             frameBorder="0"
             scrolling="no"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=9.1540%2C48.7530%2C9.1640%2C48.7590&layer=mapnik&marker=48.7560%2C9.1590"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=9.1202%2C48.7610%2C9.1302%2C48.7660&layer=mapnik&marker=48.7636%2C9.1252"
             style={{ border: '1px solid #333' }}
           ></iframe>
         </div>

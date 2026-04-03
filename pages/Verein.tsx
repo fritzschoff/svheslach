@@ -47,10 +47,16 @@ const Verein: React.FC = () => {
               <div className="text-8xl font-black mb-4">100</div>
               <div className="text-2xl font-bold uppercase tracking-widest mb-6">Jahre SV Heslach</div>
               <div className="h-1 w-16 bg-white mb-6"></div>
-              <p className="text-white/80 leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
+              <p className="text-white/80 leading-relaxed mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
                 1926 – 2026. Ein Jahrhundert voller Sportgeist, Zusammenhalt und
-                unvergesslicher Momente. Wir feiern mit Ihnen!
+                unvergesslicher Momente. Feier mit uns am 20.06.2026!
               </p>
+              <a
+                href="#/mitgliedschaft"
+                className="inline-block bg-white text-red-600 px-8 py-3 font-bold uppercase tracking-widest text-xs hover:bg-black hover:text-white transition-all"
+              >
+                Feier mit uns am 20.06.2026
+              </a>
             </div>
           </div>
         </div>
