@@ -1,15 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="200" height="240">
-  <!-- Shield shape -->
-  <path d="M10 10 H190 V160 Q100 250 10 160 Z" fill="#000000" stroke="#DC2626" stroke-width="6"/>
-  <!-- Red bottom half -->
+  <!-- Red background -->
+  <rect width="200" height="240" fill="#DC2626"/>
+  <!-- Shield shape - black fill -->
+  <path d="M25 25 H175 V160 Q100 240 25 160 Z" fill="#000000"/>
+  <!-- Red top half of shield -->
   <clipPath id="shield">
-    <path d="M10 10 H190 V160 Q100 250 10 160 Z"/>
+    <path d="M25 25 H175 V160 Q100 240 25 160 Z"/>
   </clipPath>
-  <rect x="10" y="130" width="180" height="120" fill="#DC2626" clip-path="url(#shield)"/>
-  <!-- White divider line -->
-  <line x1="13" y1="130" x2="187" y2="130" stroke="white" stroke-width="3"/>
-  <!-- SV text -->
-  <text x="100" y="95" text-anchor="middle" font-family="Oswald, sans-serif" font-weight="700" font-size="72" fill="white" letter-spacing="4">SV</text>
-  <!-- H text -->
-  <text x="100" y="195" text-anchor="middle" font-family="Oswald, sans-serif" font-weight="700" font-size="82" fill="white" letter-spacing="4">H</text>
+  <rect x="25" y="25" width="150" height="110" fill="#DC2626" clip-path="url(#shield)"/>
+  <!-- Black border around top section -->
+  <rect x="25" y="25" width="150" height="110" fill="none" stroke="#000000" stroke-width="3" clip-path="url(#shield)"/>
+  <!-- SV text - black on red -->
+  <text x="100" y="110" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="72" fill="#000000" letter-spacing="2">SV</text>
+  <!-- H text - red on black -->
+  <text x="100" y="205" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="82" fill="#DC2626" letter-spacing="2">H</text>
 </svg>
