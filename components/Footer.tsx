@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <img src="/images/wappen-svh.png" alt="SVH Wappen" className="w-10 h-10" />
+              <img src="/images/logo-svh.jpeg" alt="SV Heslach Wappen" className="w-10 h-10 rounded-full object-cover" />
               <span className="font-oswald text-2xl tracking-widest uppercase">SV HESLACH</span>
             </div>
             <p className="text-stone-400 text-sm leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
@@ -22,11 +22,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-bold uppercase mb-6 text-red-600">Navigation</h4>
             <ul className="space-y-4 text-sm text-stone-400" style={{ fontFamily: 'Inter, sans-serif' }}>
-              <li><a href="#/verein" className="hover:text-white transition-colors">Über den Verein</a></li>
-              <li><a href="#/mitgliedschaft" className="hover:text-white transition-colors">Mitglied werden</a></li>
-              <li><a href="#/sportarten" className="hover:text-white transition-colors">Sportangebot</a></li>
-              <li><a href="#/gaststaette" className="hover:text-white transition-colors">Vereinsgaststätte</a></li>
-              <li><a href="#/kontakt" className="hover:text-white transition-colors">Kontakt</a></li>
+              <li><a href="/verein" className="hover:text-white transition-colors">Über den Verein</a></li>
+              <li><a href="/mitgliedschaft" className="hover:text-white transition-colors">Mitglied werden</a></li>
+              <li><a href="/sportarten" className="hover:text-white transition-colors">Sportangebot</a></li>
+              <li><a href="/gaststaette" className="hover:text-white transition-colors">Vereinsgaststätte</a></li>
+              <li><a href="/kontakt" className="hover:text-white transition-colors">Kontakt</a></li>
             </ul>
           </div>
 
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
             height="250"
             frameBorder="0"
             scrolling="no"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=9.1202%2C48.7610%2C9.1302%2C48.7660&layer=mapnik&marker=48.7636%2C9.1252"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=9.1222%2C48.7620%2C9.1282%2C48.7652&layer=mapnik&marker=48.7636%2C9.1252"
             style={{ border: '1px solid #333' }}
           ></iframe>
         </div>
@@ -67,8 +67,8 @@ const Footer: React.FC = () => {
         <div className="pt-10 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-500 uppercase tracking-widest">
           <p>© 2026 SV HESLACH E.V.</p>
           <div className="flex gap-8">
-            <a href="#/impressum" className="hover:text-red-600">Impressum</a>
-            <a href="#/datenschutz" className="hover:text-red-600">Datenschutz</a>
+            <a href="/impressum" className="hover:text-red-600">Impressum</a>
+            <a href="/datenschutz" className="hover:text-red-600">Datenschutz</a>
           </div>
         </div>
       </div>

@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
               Sportangebot entdecken
             </button>
             <a
-              href="#/mitgliedschaft"
+              href="/mitgliedschaft"
               className="border-2 border-white text-white px-10 py-4 font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all text-center"
             >
               Jetzt Mitglied werden

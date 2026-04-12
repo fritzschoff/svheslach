@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -14,11 +14,32 @@ import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import SportPage from './pages/SportPage';
 import InfoPlakat from './pages/InfoPlakat';
+import { SPORTS } from './constants';
 
-const ScrollToTop: React.FC = () => {
+const PAGE_TITLES: Record<string, string> = {
+  '/': 'SV Heslach 1926 e.V. – Sportverein in Stuttgart-Süd',
+  '/verein': 'Unser Verein – SV Heslach 1926 e.V.',
+  '/sportarten': 'Sportangebot – SV Heslach 1926 e.V.',
+  '/mitgliedschaft': 'Mitglied werden – SV Heslach 1926 e.V.',
+  '/gaststaette': 'Weitmanns Waldhaus – Vereinsgaststätte im Heslacher Wald',
+  '/kontakt': 'Kontakt – SV Heslach 1926 e.V.',
+  '/news': 'Neuigkeiten – SV Heslach 1926 e.V.',
+  '/impressum': 'Impressum – SV Heslach 1926 e.V.',
+  '/datenschutz': 'Datenschutz – SV Heslach 1926 e.V.',
+  '/info-plakat': '100 Jahre Jubiläum – Info-Plakat – SV Heslach 1926 e.V.',
+};
+
+const ScrollToTopAndTitle: React.FC = () => {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (pathname.startsWith('/sport/')) {
+      const sportId = pathname.split('/sport/')[1];
+      const sport = SPORTS.find(s => s.id === sportId);
+      document.title = sport ? `${sport.title} – SV Heslach 1926 e.V.` : 'SV Heslach 1926 e.V.';
+    } else {
+      document.title = PAGE_TITLES[pathname] || 'SV Heslach 1926 e.V.';
+    }
   }, [pathname]);
   return null;
 };
@@ -26,7 +47,7 @@ const ScrollToTop: React.FC = () => {
 const App: React.FC = () => {
   return (
     <Router>
-      <ScrollToTop />
+      <ScrollToTopAndTitle />
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <div className="flex-grow">

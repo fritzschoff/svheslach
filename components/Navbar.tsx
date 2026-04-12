@@ -6,12 +6,12 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#/' },
-    { name: 'Verein', href: '#/verein' },
-    { name: 'Sportarten', href: '#/sportarten' },
-    { name: 'Mitgliedschaft', href: '#/mitgliedschaft' },
-    { name: 'Gaststätte', href: '#/gaststaette' },
-    { name: 'Kontakt', href: '#/kontakt' },
+    { name: 'Home', href: '/' },
+    { name: 'Verein', href: '/verein' },
+    { name: 'Sportarten', href: '/sportarten' },
+    { name: 'Mitgliedschaft', href: '/mitgliedschaft' },
+    { name: 'Gaststätte', href: '/gaststaette' },
+    { name: 'Kontakt', href: '/kontakt' },
   ];
 
   return (
@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <a href="#/" className="flex-shrink-0 flex items-center gap-3">
+          <a href="/" className="flex-shrink-0 flex items-center gap-3">
             <img src="/images/logo-svh.jpeg" alt="SVH Logo" className="w-12 h-12 rounded-full object-cover" />
             <div className="flex flex-col">
               <span className="font-oswald text-xl leading-none tracking-wider">SV HESLACH</span>
@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             <a
-              href="#/mitgliedschaft"
+              href="/mitgliedschaft"
               className="bg-red-600 text-white px-6 py-2 rounded-sm font-bold uppercase text-sm hover:bg-red-500 transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
               Mitglied werden
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             <a
-              href="#/mitgliedschaft"
+              href="/mitgliedschaft"
               onClick={() => setIsOpen(false)}
               className="block w-full text-center bg-red-600 text-white px-3 py-4 font-bold uppercase tracking-widest"
             >

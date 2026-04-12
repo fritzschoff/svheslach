@@ -52,13 +52,60 @@ const Verein: React.FC = () => {
                 unvergesslicher Momente. Feier mit uns am 20.06.2026!
               </p>
               <a
-                href="#/mitgliedschaft"
+                href="/mitgliedschaft"
                 className="inline-block bg-white text-red-600 px-8 py-3 font-bold uppercase tracking-widest text-xs hover:bg-black hover:text-white transition-all"
               >
                 Feier mit uns am 20.06.2026
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Chronik / Zeitreise */}
+      <section className="py-20 bg-white border-t border-stone-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="inline-flex items-center gap-2 mb-6 bg-black text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+            Chronik
+          </div>
+          <h2 className="text-4xl font-black uppercase tracking-tighter mb-6">Zeitreise durch unsere Geschichte</h2>
+          <div className="h-1 w-16 bg-red-600 mb-10"></div>
+
+          <p className="text-stone-600 leading-relaxed mb-10" style={{ fontFamily: 'Inter, sans-serif' }}>
+            In fast 100 Jahren hat sich der Sportverein Heslach vom Arbeiterverein zum gut bürgerlichen Verein entwickelt,
+            dessen Mitglieder aus allen beruflichen Bereichen kommen. Unzählige Frauen und Männer haben im Vorstand,
+            im Ausschuss, in den Abteilungen sowie bei der Organisation von Veranstaltungen uneigennützig dazu beigetragen,
+            dass der Sportverein Heslach ein Ort der sportlichen Gemeinschaft war und ist. Der große Wunsch des Vereins,
+            sozusagen als Vision, ist eine eigene Sporthalle, die vorerst natürlich unbezahlbar ist. Aber darf man denn
+            nicht auch mit fast 100 noch Visionen für die Zukunft haben?
+          </p>
+
+          <ol className="relative border-l-2 border-red-600 ml-3 space-y-10" style={{ fontFamily: 'Inter, sans-serif' }}>
+            {[
+              { year: 'Seit 2004', text: 'Der Kunstrasenplatz wird eröffnet.' },
+              { year: '1998', text: 'Im Frühjahr übernimmt Horst Alber den Vorsitz im Sportverein Heslach, Horst Haußer wird Stellvertreter. Gemeinsam mit den Abteilungsleitern und den Mitgliedern wird seither versucht, dem SVH wieder neuen Elan und Mut zu geben. Ein Kraftraum wird neu eingerichtet, außerdem entstehen neue Abteilungen für Walking und Radtouren.' },
+              { year: '21. Juni 1985', text: 'Karl Widmann wird 1. Vorsitzender und bleibt dies 13 Jahre lang. Die Satzung des SV Heslach wird modernisiert.' },
+              { year: '1979', text: 'Kurt Wünsch gründet eine Senioren-Freizeit-Sport- und Wanderabteilung. Die Kinderabteilung des Vereins löst sich als nicht mehr zeitgemäß auf. Die Verantwortung für die Vereinsjugend wird aber weiter ernst genommen.' },
+              { year: '1978', text: 'Umbau der Sportanlage: Ein Kleinspielfeld mit wasserdurchlässigem Kunststoffbelag und der Tennenplatz werden neu angelegt.' },
+              { year: '1969', text: 'Walter Erhardt wird zum neuen 1. Vorsitzenden gewählt. Sein Auftrag: ein neues Clubhaus zu erstellen. Jahrelang dauern die Vorarbeiten und Verhandlungen. Stadt und Land geben finanzielle Zuschüsse, die Mitglieder unterstützen das Vorhaben durch Eigenleistungen, zusätzliche Unterstützung kommt von Stuttgarter Hofbräu. Im Januar 1974 beginnt das Projekt.' },
+              { year: 'Juni 1951', text: 'Mit einem bunten Sport- und Gesellschaftsprogramm, darunter einer musikalisch umrahmten Morgenfeier in den Favorit-Lichtspielen, feiert der Verein sein 25-jähriges Bestehen.' },
+              { year: 'Dezember 1945', text: 'Neuaufbau der Vereinsaktivitäten. Neuer Pachtvertrag für den Sportplatz an der Rotenwaldstraße.' },
+              { year: '1. November 1945', text: 'Neuanfang als SV Heslach: Der Sportverein Heslach wird gegründet und versteht sich als Fortsetzung des Freien Turn- und Sportvereins Karlsvorstadt. Zum 1. Vorsitzenden wird Willi Renz gewählt.' },
+              { year: '1933 – 1945', text: 'Die Nationalsozialisten kommen an die Macht und zerschlagen die Einrichtungen der Arbeiterbewegung.' },
+              { year: 'Juni 1931', text: 'Unter der Planung von Otto Undiener wird das erste eigene Clubhaus geplant und gebaut.' },
+              { year: 'Juni 1930', text: 'Otto Undiener wird als 1. Vorsitzender gewählt.' },
+              { year: '1927', text: 'Eintragung des Vereins in das Vereinsregister. Der Verein bietet Schwer- und Leichtathletik an, hat eine Wander- und eine Damenabteilung. Ergänzend kommt von der Heslacher Abteilung der freien Turnerschaft das Turnen und Handball ins Programm. 1. Vorsitzender wird der Goldarbeiter Erich Wiesmüller. Der Verein trainiert in den Turnhallen von Lerchenrain- und Schreiberschule sowie auf dem Sportplatz an der Rotenwaldstraße.' },
+              { year: '1926', text: 'Die Abteilung II der Freien Turnerschaft schließt sich mit dem 1910 gegründeten „Kraftsportverein Karlsvorstadt" zusammen, der sich daraufhin zum „Freien Turn- und Sportverein Karlsvorstadt" umbenennt.' },
+              { year: 'Juli 1904', text: 'Der „Turnverein Jahn Stuttgart" fusioniert mit dem „Turnklub Stuttgart" zur „Freien Turnerschaft Stuttgart".' },
+              { year: '1897', text: 'Karl Frey gründet den „Turnverein Jahn Stuttgart", der als erster Sportverein in Stuttgart dem Arbeiterturnerbund beitritt – der Gegengründung zum bürgerlich dominierten Deutschen Turnbund.' },
+            ].map((item, i) => (
+              <li key={i} className="ml-6">
+                <span className="absolute -left-[9px] w-4 h-4 bg-red-600 rounded-full border-2 border-white shadow"></span>
+                <h3 className="text-lg font-black uppercase tracking-tight text-black mb-2">{item.year}</h3>
+                <p className="text-stone-600 leading-relaxed">{item.text}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sv-heslach.web.app/sitemap.xml

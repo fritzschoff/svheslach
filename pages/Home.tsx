@@ -20,7 +20,7 @@ const Home: React.FC = () => {
                 </p>
              </div>
              <div className="flex gap-4">
-                <a href="#/info-plakat" className="bg-black text-white px-8 py-3 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">
+                <a href="/info-plakat" className="bg-black text-white px-8 py-3 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">
                   Info-Plakat
                 </a>
                 <button className="bg-white text-black border-2 border-black px-8 py-3 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">
@@ -111,7 +111,7 @@ const Home: React.FC = () => {
             Unsere gemütliche Vereinsgaststätte befindet sich direkt auf dem Vereinsgelände im Heslacher Wald.
           </p>
           <a
-            href="#/gaststaette"
+            href="/gaststaette"
             className="inline-block bg-red-600 text-white px-12 py-4 font-black uppercase text-sm tracking-widest hover:scale-105 transition-all"
           >
             Mehr erfahren

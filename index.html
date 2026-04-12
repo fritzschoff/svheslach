@@ -4,8 +4,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SV Heslach 1926 e.V.</title>
+    <title>SV Heslach 1926 e.V. – Sportverein in Stuttgart-Süd</title>
+    <meta name="description" content="SV Heslach 1926 e.V. – Dein Breitensportverein in Stuttgart-Süd. 10 Abteilungen: Fußball, Handball, Tischtennis, Kinderturnen, Gymnastik, Walking, Faustball u.v.m. Vereinsgaststätte Weitmanns Waldhaus. 100 Jahre Tradition seit 1926." />
+    <meta name="keywords" content="SV Heslach, Sportverein Stuttgart, Breitensport Stuttgart-Süd, Fußball Stuttgart, Handball Stuttgart, Vereinsgaststätte Heslacher Wald, Weitmanns Waldhaus, Sportverein Heslach" />
+    <link rel="canonical" href="https://sv-heslach.web.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="SV Heslach 1926 e.V." />
+    <meta property="og:title" content="SV Heslach 1926 e.V. – Sportverein in Stuttgart-Süd" />
+    <meta property="og:description" content="Dein Breitensportverein in Stuttgart-Süd. 10 Abteilungen, Vereinsgaststätte Weitmanns Waldhaus und 100 Jahre Tradition seit 1926." />
+    <meta property="og:url" content="https://sv-heslach.web.app/" />
+    <meta property="og:image" content="https://sv-heslach.web.app/images/logo-svh.jpeg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="SV Heslach 1926 e.V. – Sportverein in Stuttgart-Süd" />
+    <meta name="twitter:description" content="Dein Breitensportverein in Stuttgart-Süd mit 10 Abteilungen und Vereinsgaststätte." />
+    <meta name="twitter:image" content="https://sv-heslach.web.app/images/logo-svh.jpeg" />
+
+    <!-- Geo -->
+    <meta name="geo.region" content="DE-BW" />
+    <meta name="geo.placename" content="Stuttgart" />
+    <meta name="geo.position" content="48.7636;9.1252" />
+    <meta name="ICBM" content="48.7636, 9.1252" />
+
     <link rel="icon" type="image/svg+xml" href="/images/logo-svh.svg" />
+    <link rel="apple-touch-icon" href="/images/logo-svh.jpeg" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +44,73 @@
         font-family: 'Oswald', sans-serif;
       }
     </style>
+
+    <!-- Structured Data: SportsOrganization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsOrganization",
+      "name": "SV Heslach 1926 e.V.",
+      "alternateName": "Sportverein Heslach",
+      "url": "https://sv-heslach.web.app",
+      "logo": "https://sv-heslach.web.app/images/logo-svh.jpeg",
+      "image": "https://sv-heslach.web.app/images/logo-svh.jpeg",
+      "description": "Breitensportverein in Stuttgart-Süd mit 10 Abteilungen. Fußball, Handball, Tischtennis, Kinderturnen, Gymnastik, Walking, Faustball und mehr. Gegründet 1926.",
+      "foundingDate": "1926",
+      "email": "info@svheslach.de",
+      "telephone": "+49711690714",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rotenwaldstraße 373",
+        "addressLocality": "Stuttgart",
+        "postalCode": "70197",
+        "addressRegion": "Baden-Württemberg",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.7636,
+        "longitude": 9.1252
+      },
+      "sport": ["Fußball", "Handball", "Tischtennis", "Kinderturnen", "Ballsport", "Gymnastik", "Walking", "Faustball"],
+      "sameAs": [
+        "https://www.instagram.com/svheslach_fussball"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: Restaurant -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Weitmanns Waldhaus",
+      "description": "Vereinsgaststätte des SV Heslach im Heslacher Wald. Gutbürgerliche schwäbische Küche mit Biergarten.",
+      "url": "https://sv-heslach.web.app/gaststaette",
+      "image": "https://sv-heslach.web.app/images/gaststaette/biergarten-panorama.jpg",
+      "servesCuisine": "Schwäbisch",
+      "telephone": "+49711690714",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rotenwaldstraße 373",
+        "addressLocality": "Stuttgart",
+        "postalCode": "70197",
+        "addressRegion": "Baden-Württemberg",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.7636,
+        "longitude": 9.1252
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "description": "Ruhetag" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "17:00", "closes": "23:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "12:00", "closes": "23:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "22:00" }
+      ]
+    }
+    </script>
   <script type="importmap">
 {
   "imports": {

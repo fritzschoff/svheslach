@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { SPORTS } from '../constants';
-import { Clock, User, Mail, MapPin, ArrowLeft, ChevronRight } from 'lucide-react';
+import { Clock, User, Mail, MapPin, ArrowLeft, ExternalLink } from 'lucide-react';
 
 interface SportPageProps {
   sportId: string;
@@ -14,7 +14,7 @@ const SportPage: React.FC<SportPageProps> = ({ sportId }) => {
     return (
       <div className="min-h-screen py-32 flex flex-col items-center justify-center bg-stone-50">
         <h1 className="text-4xl font-black uppercase tracking-tighter mb-4">Sportart nicht gefunden</h1>
-        <a href="#/" className="mt-8 text-red-600 font-bold uppercase tracking-widest text-xs underline">
+        <a href="/" className="mt-8 text-red-600 font-bold uppercase tracking-widest text-xs underline">
           Zur&uuml;ck zur Startseite
         </a>
       </div>
@@ -31,7 +31,7 @@ const SportPage: React.FC<SportPageProps> = ({ sportId }) => {
           <img src={sport.piktogramm} alt="" className="w-full h-full object-contain scale-150" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <a href="#/" className="inline-flex items-center gap-2 text-stone-400 hover:text-white text-xs font-bold uppercase tracking-widest mb-8 transition-colors">
+          <a href="/" className="inline-flex items-center gap-2 text-stone-400 hover:text-white text-xs font-bold uppercase tracking-widest mb-8 transition-colors">
             <ArrowLeft size={14} /> Zur&uuml;ck zur Startseite
           </a>
           <div className="flex flex-col md:flex-row items-center gap-12">
@@ -62,15 +62,59 @@ const SportPage: React.FC<SportPageProps> = ({ sportId }) => {
               <p className="text-stone-600 text-lg leading-relaxed mb-8" style={{ fontFamily: 'Inter, sans-serif' }}>
                 {sport.longDescription}
               </p>
-              <p className="text-stone-500 leading-relaxed mb-8" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              </p>
-              <p className="text-stone-500 leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-              </p>
+
+              {sport.extraParagraphs && sport.extraParagraphs.length > 0 ? (
+                sport.extraParagraphs.map((p, i) => (
+                  <p
+                    key={i}
+                    className="text-stone-500 leading-relaxed mb-6"
+                    style={{ fontFamily: 'Inter, sans-serif' }}
+                  >
+                    {p}
+                  </p>
+                ))
+              ) : (
+                <p className="text-stone-400 italic leading-relaxed mb-8" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  … bald steht hier eine genauere Beschreibung …
+                </p>
+              )}
+
+              {sport.links && sport.links.length > 0 && (
+                <ul className="space-y-2 mb-8">
+                  {sport.links.map((l) => (
+                    <li key={l.url}>
+                      <a
+                        href={l.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-red-600 hover:underline break-all"
+                        style={{ fontFamily: 'Inter, sans-serif' }}
+                      >
+                        <ExternalLink size={16} className="shrink-0" />
+                        <span>{l.label}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {sport.photos && sport.photos.length > 0 && (
+                <div className="mt-12">
+                  <h3 className="text-2xl font-black uppercase tracking-tighter mb-6">Impressionen</h3>
+                  <div className={`grid gap-4 ${sport.photos.length === 1 ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2'}`}>
+                    {sport.photos.map((src, i) => (
+                      <div key={src} className="overflow-hidden bg-stone-100">
+                        <img
+                          src={src}
+                          alt={`${sport.title} Foto ${i + 1}`}
+                          className="w-full h-full object-cover aspect-[4/3]"
+                          loading="lazy"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Pictogram Gallery */}
               <div className="mt-16">
@@ -145,7 +189,7 @@ const SportPage: React.FC<SportPageProps> = ({ sportId }) => {
                   Komm einfach zum Training vorbei oder melde dich bei uns. Wir freuen uns auf dich!
                 </p>
                 <a
-                  href="#/mitgliedschaft"
+                  href="/mitgliedschaft"
                   className="block w-full bg-white text-black py-4 font-black uppercase text-xs tracking-widest text-center hover:bg-black hover:text-white transition-colors"
                 >
                   Mitglied werden
