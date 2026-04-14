@@ -77,8 +77,8 @@ export const SPORTS: SportSection[] = [
     piktogramm: '/images/piktogramme/Piktogramme_oeffentlSportuBewegungsRaum/Piktogramme_rot_auf_weiss/icon_oeffentlSportuBewegungsRaum_rot_auf_weiss_500px.png',
     link: '/sport/kids-in-motion',
     email: 'kidsinmotion@svheslach.de',
-    trainingTimes: 'Fr 15:45 Uhr, Turnhalle der Torwiesenschule',
-    contact: 'Sabine Jelica'
+    trainingTimes: 'Fr 16:30 Uhr, Turnhalle der Torwiesenschule',
+    contact: 'Cora Auracher'
   },
   {
     id: 'ballsport-kinder',
@@ -91,7 +91,7 @@ export const SPORTS: SportSection[] = [
     link: '/sport/ballsport-kinder',
     email: 'ballsportfuerkinder@svheslach.de',
     trainingTimes: 'Mi & Fr jeweils 17:30 Uhr, Turnhalle der Kaufmännischen Schule Aussenstelle Süd, Zellerstraße 37',
-    contact: 'Cosima Schon (Anmeldung: Gabriele Schmid)'
+    contact: 'Alicia Lamade (Anmeldung: Gabriele Schmid)'
   },
   {
     id: 'gymnastik',

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { GENERAL_EMAIL } from '../constants';
-import { Check, Mail, Phone, MapPin } from 'lucide-react';
+import { Check, Mail, Phone, MapPin, Download } from 'lucide-react';
 
 const MITGLIED_MAILTO = `mailto:${encodeURIComponent('info@svheslach.de')}?subject=${encodeURIComponent('Mitgliedschaftsanfrage SV Heslach')}&body=${encodeURIComponent('Hallo liebes SV Heslach-Team,\n\nich interessiere mich für eine Mitgliedschaft in Eurem Verein und würde gerne weitere Informationen erhalten.\n\nBitte sendet mir den Aufnahmeantrag zu.\n\nName: \nAdresse: \nTelefon: \n\nMit freundlichen Grüßen')}`;
 
@@ -49,7 +49,7 @@ const Mitgliedschaft: React.FC = () => {
             <div className="space-y-6 text-left mb-12">
               {[
                 { step: '1', text: 'Kommen Sie zu einem Schnuppertraining in der Abteilung Ihrer Wahl.' },
-                { step: '2', text: 'Füllen Sie den Aufnahmeantrag aus – erhältlich vor Ort oder per E-Mail.' },
+                { step: '2', text: 'Füllen Sie den Aufnahmeantrag aus – erhältlich vor Ort, per E-Mail oder als Download.' },
                 { step: '3', text: 'Geben Sie den Antrag bei der Verwaltung ab oder senden Sie ihn per E-Mail.' },
               ].map((item) => (
                 <div key={item.step} className="flex items-start gap-6">
@@ -61,12 +61,21 @@ const Mitgliedschaft: React.FC = () => {
               ))}
             </div>
             <div className="text-center space-y-6">
-              <a
-                href={MITGLIED_MAILTO}
-                className="inline-block bg-red-600 text-white px-12 py-4 font-black uppercase text-sm tracking-widest hover:bg-black transition-colors"
-              >
-                Jetzt per E-Mail anfragen
-              </a>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <a
+                  href="/documents/SV_Heslach-Mitgliedsantrag.pdf"
+                  download
+                  className="inline-flex items-center justify-center gap-2 bg-black text-white px-12 py-4 font-black uppercase text-sm tracking-widest hover:bg-red-600 transition-colors"
+                >
+                  <Download size={18} /> Antrag herunterladen
+                </a>
+                <a
+                  href={MITGLIED_MAILTO}
+                  className="inline-block bg-red-600 text-white px-12 py-4 font-black uppercase text-sm tracking-widest hover:bg-black transition-colors"
+                >
+                  Jetzt per E-Mail anfragen
+                </a>
+              </div>
               <div className="flex flex-col sm:flex-row justify-center gap-6 text-sm">
                 <a href={MITGLIED_MAILTO} className="flex items-center justify-center gap-2 text-red-600 font-bold hover:underline">
                   <Mail size={16} /> {GENERAL_EMAIL}
