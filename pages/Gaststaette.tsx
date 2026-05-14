@@ -47,11 +47,38 @@ const Gaststaette: React.FC = () => {
                 <h3 className="text-lg font-black uppercase tracking-tighter mb-6 flex items-center gap-2">
                   <Clock size={18} className="text-red-600" /> Öffnungszeiten
                 </h3>
-                <ul className="space-y-3 text-stone-600 text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
-                  <li className="flex justify-between"><span>Montag</span><span className="text-stone-400">Ruhetag</span></li>
-                  <li className="flex justify-between"><span>Dienstag – Freitag</span><span>17:00 – 23:00 Uhr</span></li>
-                  <li className="flex justify-between"><span>Samstag</span><span>12:00 – 23:00 Uhr</span></li>
-                  <li className="flex justify-between"><span>Sonntag & Feiertage</span><span>11:00 – 22:00 Uhr</span></li>
+                <p className="text-red-600 font-bold text-sm mb-5" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  Ruhetag: Montag + Dienstag
+                </p>
+                <ul className="space-y-5 text-stone-600 text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  <li>
+                    <div className="flex justify-between">
+                      <span className="font-semibold">Mittwoch, Donnerstag & Freitag</span>
+                      <span>11:30 – 21:00 Uhr</span>
+                    </div>
+                    <p className="text-stone-400 text-xs mt-1">Warme Küche von 11:30 bis 20:30 Uhr</p>
+                  </li>
+                  <li>
+                    <div className="flex justify-between">
+                      <span className="font-semibold">Samstag</span>
+                      <span>12:00 – 22:00 Uhr</span>
+                    </div>
+                    <p className="text-stone-400 text-xs mt-1">Warme Küche von 12:00 bis 21:00 Uhr</p>
+                  </li>
+                  <li>
+                    <div className="flex justify-between">
+                      <span className="font-semibold">Sonntag</span>
+                      <span>11:30 – 20:00 Uhr</span>
+                    </div>
+                    <p className="text-stone-400 text-xs mt-1">Warme Küche von 11:30 bis 19:30 Uhr</p>
+                  </li>
+                  <li>
+                    <div className="flex justify-between">
+                      <span className="font-semibold">Feiertage</span>
+                      <span className="text-stone-400">Siehe Aushang</span>
+                    </div>
+                    <p className="text-stone-400 text-xs mt-1">Aktueller Aushang / Homepage / Facebook</p>
+                  </li>
                 </ul>
               </div>
 

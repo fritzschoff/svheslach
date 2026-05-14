@@ -10,56 +10,63 @@ const Home: React.FC = () => {
       <Hero />
 
       {/* 100 Year Teaser */}
-      <section className="bg-red-600 py-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-             <div className="md:w-1/2">
-                <h2 className="text-4xl font-black text-white uppercase mb-4 tracking-tighter">Ein Jahrhundert Heslach</h2>
-                <p className="text-white font-medium text-lg leading-relaxed opacity-90" style={{ fontFamily: 'Inter, sans-serif' }}>
-                  Gegründet 1926 blicken wir auf eine bewegte Geschichte zurück. Im Jahr 2026 feiern wir unser 100-jähriges Bestehen am 20.06.2026 auf unserem Vereinsgelände in der Rotenwaldstr. 373 in 70197 Stuttgart.
-                </p>
-             </div>
-             <div className="flex gap-4">
-                <a href="/info-plakat" className="bg-black text-white px-8 py-3 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">
-                  Info-Plakat
-                </a>
-                <button className="bg-white text-black border-2 border-black px-8 py-3 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">
-                  Termine 2026
-                </button>
-             </div>
+      {new Date() <= new Date('2026-05-21T23:59:59') && (
+        <section className="bg-red-600 py-16 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+               <div className="md:w-1/2">
+                  <h2 className="text-4xl font-black text-white uppercase mb-4 tracking-tighter">Ein Jahrhundert Heslach</h2>
+                  <p className="text-white font-medium text-lg leading-relaxed opacity-90" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    Gegründet 1926 blicken wir auf eine bewegte Geschichte zurück. Im Jahr 2026 feiern wir unser 100-jähriges Bestehen am 20.06.2026 auf unserem Vereinsgelände in der Rotenwaldstr. 373 in 70197 Stuttgart.
+                  </p>
+               </div>
+               <div className="flex gap-4">
+                  <a href="/info-plakat" className="bg-black text-white px-8 py-3 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">
+                    Info-Plakat
+                  </a>
+                  <button className="bg-white text-black border-2 border-black px-8 py-3 font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform">
+                    Termine 2026
+                  </button>
+               </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Termine */}
-      <section className="py-16 bg-stone-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-4xl font-black text-white uppercase tracking-tighter mb-4">Termine</h2>
-            <div className="h-1.5 w-24 bg-red-600 mx-auto"></div>
-          </div>
-          <div className="max-w-2xl mx-auto space-y-6">
-            <div className="flex items-center gap-6 bg-stone-800 p-6 border-l-4 border-red-600">
-              <div className="text-center shrink-0">
-                <div className="text-red-600 font-black text-2xl">08.05.</div>
-                <div className="text-stone-400 text-sm font-bold">2026</div>
+      {(() => {
+        const termine = [
+          { iso: '2026-05-08', day: '08.05.', year: '2026', title: 'Mitgliederversammlung' },
+          { iso: '2026-06-20', day: '20.06.', year: '2026', title: 'Fest zum 100-jährigen Bestehen' },
+        ];
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const upcoming = termine.filter(t => new Date(t.iso) >= today);
+        if (upcoming.length === 0) return null;
+        return (
+          <section className="py-16 bg-stone-900">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-10">
+                <h2 className="text-4xl font-black text-white uppercase tracking-tighter mb-4">Termine</h2>
+                <div className="h-1.5 w-24 bg-red-600 mx-auto"></div>
               </div>
-              <div>
-                <h3 className="text-white font-bold text-lg">Mitgliederversammlung</h3>
+              <div className="max-w-2xl mx-auto space-y-6">
+                {upcoming.map((t) => (
+                  <div key={t.iso} className="flex items-center gap-6 bg-stone-800 p-6 border-l-4 border-red-600">
+                    <div className="text-center shrink-0">
+                      <div className="text-red-600 font-black text-2xl">{t.day}</div>
+                      <div className="text-stone-400 text-sm font-bold">{t.year}</div>
+                    </div>
+                    <div>
+                      <h3 className="text-white font-bold text-lg">{t.title}</h3>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="flex items-center gap-6 bg-stone-800 p-6 border-l-4 border-red-600">
-              <div className="text-center shrink-0">
-                <div className="text-red-600 font-black text-2xl">20.06.</div>
-                <div className="text-stone-400 text-sm font-bold">2026</div>
-              </div>
-              <div>
-                <h3 className="text-white font-bold text-lg">Fest zum 100-jährigen Bestehen</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        );
+      })()}
 
       <SectionCards />
 

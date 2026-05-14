@@ -63,6 +63,7 @@ const App: React.FC = () => {
             <Route path="/datenschutz" element={<Datenschutz />} />
             <Route path="/info-plakat" element={<InfoPlakat />} />
             <Route path="/sport/fussball" element={<SportPage sportId="fussball" />} />
+            <Route path="/sport/freizeitkicker" element={<SportPage sportId="freizeitkicker" />} />
             <Route path="/sport/handball" element={<SportPage sportId="handball" />} />
             <Route path="/sport/tischtennis" element={<SportPage sportId="tischtennis" />} />
             <Route path="/sport/kids-in-motion" element={<SportPage sportId="kids-in-motion" />} />

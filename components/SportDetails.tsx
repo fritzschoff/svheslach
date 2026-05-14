@@ -17,7 +17,7 @@ const SportDetails: React.FC = () => {
         </div>
 
         <div className="space-y-16">
-          {SPORTS.map((sport, index) => (
+          {SPORTS.filter((s) => !s.parentId).map((sport, index) => (
             <div
               key={sport.id}
               className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-12 items-center bg-white shadow-sm border border-stone-100 overflow-hidden`}

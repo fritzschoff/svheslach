@@ -9,6 +9,8 @@ export interface SportSection {
   title: string;
   description: string;
   longDescription: string;
+  /** If set, this section is a sub-category of the parent sport with this id. */
+  parentId?: string;
   /**
    * Optional additional paragraphs shown under `longDescription`.
    * If omitted, a "Bald steht hier eine genauere Beschreibung …" placeholder is rendered.

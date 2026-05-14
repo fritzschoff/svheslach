@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { SPORTS } from '../constants';
-import { Clock, User, Mail, MapPin, ArrowLeft, ExternalLink } from 'lucide-react';
+import { Clock, User, Mail, MapPin, ArrowLeft, ExternalLink, ChevronRight } from 'lucide-react';
 
 interface SportPageProps {
   sportId: string;
@@ -21,7 +21,9 @@ const SportPage: React.FC<SportPageProps> = ({ sportId }) => {
     );
   }
 
-  const otherSports = SPORTS.filter((s) => s.id !== sportId);
+  const subSections = SPORTS.filter((s) => s.parentId === sport.id);
+  const otherSports = SPORTS.filter((s) => s.id !== sportId && !s.parentId && s.id !== sport.parentId);
+  const parent = sport.parentId ? SPORTS.find((s) => s.id === sport.parentId) : undefined;
 
   return (
     <main>
@@ -31,9 +33,15 @@ const SportPage: React.FC<SportPageProps> = ({ sportId }) => {
           <img src={sport.piktogramm} alt="" className="w-full h-full object-contain scale-150" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <a href="/" className="inline-flex items-center gap-2 text-stone-400 hover:text-white text-xs font-bold uppercase tracking-widest mb-8 transition-colors">
-            <ArrowLeft size={14} /> Zur&uuml;ck zur Startseite
-          </a>
+          {parent ? (
+            <a href={parent.link} className="inline-flex items-center gap-2 text-stone-400 hover:text-white text-xs font-bold uppercase tracking-widest mb-8 transition-colors">
+              <ArrowLeft size={14} /> Zur&uuml;ck zu {parent.title}
+            </a>
+          ) : (
+            <a href="/" className="inline-flex items-center gap-2 text-stone-400 hover:text-white text-xs font-bold uppercase tracking-widest mb-8 transition-colors">
+              <ArrowLeft size={14} /> Zur&uuml;ck zur Startseite
+            </a>
+          )}
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-40 h-40 md:w-56 md:h-56 flex-shrink-0">
               <img src={sport.image} alt={sport.title} className="w-full h-full object-contain" />
@@ -96,6 +104,32 @@ const SportPage: React.FC<SportPageProps> = ({ sportId }) => {
                     </li>
                   ))}
                 </ul>
+              )}
+
+              {subSections.length > 0 && (
+                <div className="mt-12">
+                  <h3 className="text-2xl font-black uppercase tracking-tighter mb-6">Untergruppen</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {subSections.map((sub) => (
+                      <a
+                        key={sub.id}
+                        href={sub.link}
+                        className="group flex items-center gap-4 bg-stone-50 hover:bg-stone-100 transition-colors p-5 border border-stone-200"
+                      >
+                        <div className="w-16 h-16 shrink-0 bg-black flex items-center justify-center p-2">
+                          <img src={sub.image} alt={sub.title} className="w-full h-full object-contain" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-lg font-black uppercase tracking-tighter mb-1 group-hover:text-red-600 transition-colors">
+                            {sub.title}
+                          </h4>
+                          <p className="text-stone-500 text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>{sub.description}</p>
+                        </div>
+                        <ChevronRight size={18} className="text-red-600 shrink-0" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
               )}
 
               {sport.photos && sport.photos.length > 0 && (

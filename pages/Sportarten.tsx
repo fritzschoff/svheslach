@@ -4,6 +4,7 @@ import { SPORTS } from '../constants';
 import { ChevronRight, Mail } from 'lucide-react';
 
 const Sportarten: React.FC = () => {
+  const topLevelSports = SPORTS.filter((s) => !s.parentId);
   return (
     <main>
       {/* Hero */}
@@ -17,7 +18,7 @@ const Sportarten: React.FC = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
           <h1 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter">Sportarten</h1>
           <p className="text-stone-300 mt-4 text-lg" style={{ fontFamily: 'Inter, sans-serif' }}>
-            {SPORTS.length} Abteilungen, ein Verein. Finden Sie Ihren Sport beim SV Heslach.
+            {topLevelSports.length} Abteilungen, ein Verein. Finden Sie Ihren Sport beim SV Heslach.
           </p>
         </div>
       </section>
@@ -26,7 +27,7 @@ const Sportarten: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {SPORTS.map((sport) => (
+            {topLevelSports.map((sport) => (
               <a
                 key={sport.id}
                 href={sport.link}

@@ -38,26 +38,35 @@ const NewsPage: React.FC = () => {
           </div>
 
           {/* Upcoming Events */}
-          <div className="mt-20">
-            <h2 className="text-3xl font-black uppercase tracking-tighter mb-12">Nächste Termine</h2>
-            <div className="space-y-6">
-              {[
-                { date: '12. Juni 2026', event: 'Sommerfest Fußballjugend', time: 'ab 10:00 Uhr', location: 'Vereinsgelände' },
-                { date: '25. Juni 2026', event: 'Hauptversammlung', time: '19:30 Uhr', location: 'Vereinsheim' },
-                { date: '01. Juli 2026', event: 'Jubiläumsfeier 100 Jahre', time: 'Ganztägig', location: 'Vereinsgelände' },
-              ].map((ev, i) => (
-                <div key={i} className="flex items-center gap-8 p-6 bg-stone-50 hover:bg-stone-100 transition-colors">
-                  <div className="bg-red-600 text-white px-6 py-3 text-center min-w-[120px]">
-                    <div className="text-sm font-black">{ev.date}</div>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg">{ev.event}</h3>
-                    <p className="text-stone-500 text-sm">{ev.time} · {ev.location}</p>
-                  </div>
+          {(() => {
+            const events = [
+              { iso: '2026-06-12', date: '12. Juni 2026', event: 'Sommerfest Fußballjugend', time: 'ab 10:00 Uhr', location: 'Vereinsgelände' },
+              { iso: '2026-06-25', date: '25. Juni 2026', event: 'Hauptversammlung', time: '19:30 Uhr', location: 'Vereinsheim' },
+              { iso: '2026-07-01', date: '01. Juli 2026', event: 'Jubiläumsfeier 100 Jahre', time: 'Ganztägig', location: 'Vereinsgelände' },
+            ];
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const upcoming = events.filter(ev => new Date(ev.iso) >= today);
+            if (upcoming.length === 0) return null;
+            return (
+              <div className="mt-20">
+                <h2 className="text-3xl font-black uppercase tracking-tighter mb-12">Nächste Termine</h2>
+                <div className="space-y-6">
+                  {upcoming.map((ev) => (
+                    <div key={ev.iso} className="flex items-center gap-8 p-6 bg-stone-50 hover:bg-stone-100 transition-colors">
+                      <div className="bg-red-600 text-white px-6 py-3 text-center min-w-[120px]">
+                        <div className="text-sm font-black">{ev.date}</div>
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-lg">{ev.event}</h3>
+                        <p className="text-stone-500 text-sm">{ev.time} · {ev.location}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            );
+          })()}
         </div>
       </section>
     </main>

@@ -17,7 +17,7 @@ const SectionCards: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {SPORTS.map((sport) => (
+          {SPORTS.filter((s) => !s.parentId).map((sport) => (
             <a
               key={sport.id}
               href={sport.link}

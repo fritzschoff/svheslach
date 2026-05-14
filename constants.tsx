@@ -37,6 +37,29 @@ export const SPORTS: SportSection[] = [
     contact: 'Thomas Hildebrand (Abt.-Leiter), Nicolas Rühle (Abt.-Leiter)'
   },
   {
+    id: 'freizeitkicker',
+    parentId: 'fussball',
+    title: 'Freizeitkicker',
+    description: 'Hobbyfußball für alle, die einfach Spaß am Kicken haben.',
+    longDescription: 'Unsere Freizeitkicker treffen sich regelmäßig zum gemeinsamen Fußballspielen – ohne Ligabetrieb, ohne Tabellendruck, aber mit jeder Menge Spaß. Bei uns steht das gemeinsame Erlebnis im Vordergrund: trainieren, kicken, Freundschaftsspiele und natürlich die dritte Halbzeit.',
+    extraParagraphs: [
+      'Egal ob langjähriger Fußballer oder Wiedereinsteiger – bei den Freizeitkickern ist jeder willkommen, der Lust auf Bewegung und ein gutes Miteinander hat.'
+    ],
+    photos: [
+      '/images/sports/fotos/freizeitkicker-1.jpg',
+      '/images/sports/fotos/freizeitkicker-2.jpg',
+      '/images/sports/fotos/freizeitkicker-3.jpg',
+      '/images/sports/fotos/freizeitkicker-4.jpg'
+    ],
+    icon: 'fussball',
+    image: '/images/piktogramme/Piktogramme_Fussball/Piktogramme_weiss_auf_schwarz/icon_fussball_weiss_auf_schwarz_500px.png',
+    piktogramm: '/images/piktogramme/Piktogramme_Fussball/Piktogramme_rot_auf_weiss/icon_fussball_rot_auf_weiss_500px.png',
+    link: '/sport/freizeitkicker',
+    email: 'fussball@svheslach.de',
+    trainingTimes: 'Auf Anfrage',
+    contact: 'Thomas Hildebrand (Abt.-Leiter), Nicolas Rühle (Abt.-Leiter)'
+  },
+  {
     id: 'handball',
     title: 'Handball',
     description: 'Spielgemeinschaft mit EK Stuttgart e.V. – schnelles Teamspiel mit Kraft und Taktik.',
