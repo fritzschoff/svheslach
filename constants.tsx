@@ -56,8 +56,8 @@ export const SPORTS: SportSection[] = [
     piktogramm: '/images/piktogramme/Piktogramme_Fussball/Piktogramme_rot_auf_weiss/icon_fussball_rot_auf_weiss_500px.png',
     link: '/sport/freizeitkicker',
     email: 'fussball@svheslach.de',
-    trainingTimes: 'Auf Anfrage',
-    contact: 'Thomas Hildebrand (Abt.-Leiter), Nicolas Rühle (Abt.-Leiter)'
+    trainingTimes: 'Mi 19:00–21:00 Uhr',
+    contact: 'Jürgen Kraft (+49 177 6224984)'
   },
   {
     id: 'handball',
