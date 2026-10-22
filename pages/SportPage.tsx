@@ -136,16 +136,28 @@ const SportPage: React.FC<SportPageProps> = ({ sportId }) => {
                 <div className="mt-12">
                   <h3 className="text-2xl font-black uppercase tracking-tighter mb-6">Impressionen</h3>
                   <div className={`grid gap-4 ${sport.photos.length === 1 ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2'}`}>
-                    {sport.photos.map((src, i) => (
-                      <div key={src} className="overflow-hidden bg-stone-100">
-                        <img
-                          src={src}
-                          alt={`${sport.title} Foto ${i + 1}`}
-                          className="w-full h-full object-cover aspect-[4/3]"
-                          loading="lazy"
-                        />
-                      </div>
-                    ))}
+                    {sport.photos.map((photo, i) => {
+                      const { src, caption } = typeof photo === 'string' ? { src: photo, caption: undefined } : photo;
+                      // With an odd number of photos, the first one spans both columns so the grid stays even.
+                      const spanFull = i === 0 && sport.photos!.length > 1 && sport.photos!.length % 2 === 1;
+                      return (
+                        <figure key={src} className={`bg-stone-100 ${spanFull ? 'md:col-span-2' : ''}`}>
+                          <div className="overflow-hidden">
+                            <img
+                              src={src}
+                              alt={caption ?? `${sport.title} Foto ${i + 1}`}
+                              className="w-full h-full object-cover aspect-[4/3]"
+                              loading="lazy"
+                            />
+                          </div>
+                          {caption && (
+                            <figcaption className="px-4 py-3 text-sm font-bold text-stone-700" style={{ fontFamily: 'Inter, sans-serif' }}>
+                              {caption}
+                            </figcaption>
+                          )}
+                        </figure>
+                      );
+                    })}
                   </div>
                 </div>
               )}

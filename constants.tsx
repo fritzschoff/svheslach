@@ -46,6 +46,7 @@ export const SPORTS: SportSection[] = [
       'Egal ob langjähriger Fußballer oder Wiedereinsteiger – bei den Freizeitkickern ist jeder willkommen, der Lust auf Bewegung und ein gutes Miteinander hat.'
     ],
     photos: [
+      { src: '/images/sports/fotos/freizeitkicker-heimspiel-sg-west.jpg', caption: 'Letztes Heimspiel 4:1 gegen SG West' },
       '/images/sports/fotos/freizeitkicker-1.jpg',
       '/images/sports/fotos/freizeitkicker-2.jpg',
       '/images/sports/fotos/freizeitkicker-3.jpg',

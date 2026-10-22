@@ -4,6 +4,11 @@ export interface SportLink {
   url: string;
 }
 
+export interface SportPhoto {
+  src: string;
+  caption?: string;
+}
+
 export interface SportSection {
   id: string;
   title: string;
@@ -18,8 +23,8 @@ export interface SportSection {
   extraParagraphs?: string[];
   /** Optional external links (e.g. fussball.de team pages, Instagram). */
   links?: SportLink[];
-  /** Optional photos shown in a gallery on the sport detail page. */
-  photos?: string[];
+  /** Optional photos shown in a gallery on the sport detail page (plain path or photo with caption). */
+  photos?: (string | SportPhoto)[];
   icon: string;
   image: string;
   piktogramm: string;
