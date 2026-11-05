@@ -158,9 +158,9 @@ export const SPORTS: SportSection[] = [
     image: '/images/piktogramme/Piktogramme_Faustball/Piktogramme_weiss_auf_schwarz/icon_faustball_weiss_auf_schwarz_500px.png',
     piktogramm: '/images/piktogramme/Piktogramme_Faustball/Piktogramme_rot_auf_weiss/icon_faustball_rot_auf_weiss_500px.png',
     link: '/sport/faustball',
-    email: 'faustball@svheslach.de',
+    email: 'jens.finkbeiner@posteo.de',
     trainingTimes: 'Di 17:00–19:00 Uhr, Vereinsgelände – ab Oktober Turnhalle des Schickhardt-Gymnasiums',
-    contact: 'Otto Wiemer & Felix Auracher'
+    contact: 'Jens Finkbeiner (1. Abt.-Leiter) & Felix Auracher'
   },
   {
     id: 'senioren',
